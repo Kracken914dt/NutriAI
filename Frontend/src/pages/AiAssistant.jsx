@@ -163,7 +163,7 @@ const AiAssistant = () => {
               <input
                 type="text"
                 disabled={sending}
-                className="flex-grow bg-transparent border-none focus:ring-0 text-sm px-4 text-on-surface dark:text-white placeholder:text-tertiary/50"
+                className="flex-grow bg-transparent border-none focus:ring-0 px-4 py-3 text-on-surface dark:text-white placeholder:text-tertiary/50"
                 placeholder="Escribe tu consulta nutricional aquí..."
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}

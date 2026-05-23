@@ -148,12 +148,12 @@ const MealRegister = () => {
           </h4>
           <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="type">
+              <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="type">
                 Momento de la Comida
               </label>
               <select
                 id="type"
-                className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                 value={formData.type}
                 onChange={handleChange}
               >
@@ -165,14 +165,14 @@ const MealRegister = () => {
             </div>
 
             <div className="md:col-span-2">
-              <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="name">
+              <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="name">
                 Nombre del Alimento / Receta *
               </label>
               <input
                 id="name"
                 type="text"
                 required
-                className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                 placeholder="Ej. Batido de Proteína, Ensalada de Quinoa con Pollo"
                 value={formData.name}
                 onChange={handleChange}
@@ -180,14 +180,14 @@ const MealRegister = () => {
             </div>
 
             <div>
-              <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="calories">
+              <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="calories">
                 Calorías (kcal) *
               </label>
               <input
                 id="calories"
                 type="number"
                 required
-                className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                 placeholder="350"
                 value={formData.calories}
                 onChange={handleChange}
@@ -195,13 +195,13 @@ const MealRegister = () => {
             </div>
 
             <div>
-              <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="proteins">
+              <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="proteins">
                 Proteínas (g)
               </label>
               <input
                 id="proteins"
                 type="number"
-                className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                 placeholder="25"
                 value={formData.proteins}
                 onChange={handleChange}
@@ -209,13 +209,13 @@ const MealRegister = () => {
             </div>
 
             <div>
-              <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="carbs">
+              <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="carbs">
                 Carbohidratos (g)
               </label>
               <input
                 id="carbs"
                 type="number"
-                className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                 placeholder="40"
                 value={formData.carbs}
                 onChange={handleChange}
@@ -223,13 +223,13 @@ const MealRegister = () => {
             </div>
 
             <div>
-              <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="fats">
+              <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="fats">
                 Grasas (g)
               </label>
               <input
                 id="fats"
                 type="number"
-                className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                 placeholder="10"
                 value={formData.fats}
                 onChange={handleChange}

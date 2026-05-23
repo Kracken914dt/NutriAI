@@ -194,35 +194,35 @@ const Profile = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="name">
+                  <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="name">
                     Nombre Completo
                   </label>
                   <input
                     id="name"
                     type="text"
                     required
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                     value={formData.name}
                     onChange={handleChange}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="age">
+                  <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="age">
                     Edad (años)
                   </label>
                   <input
                     id="age"
                     type="number"
                     required
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                     value={formData.age}
                     onChange={handleChange}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="weight">
+                  <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="weight">
                     Peso Actual (kg)
                   </label>
                   <input
@@ -230,33 +230,33 @@ const Profile = () => {
                     type="number"
                     step="0.1"
                     required
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                     value={formData.weight}
                     onChange={handleChange}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="height">
+                  <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="height">
                     Estatura (cm)
                   </label>
                   <input
                     id="height"
                     type="number"
                     required
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                     value={formData.height}
                     onChange={handleChange}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="gender">
+                  <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="gender">
                     Género Fisiológico
                   </label>
                   <select
                     id="gender"
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                     value={formData.gender}
                     onChange={handleChange}
                   >
@@ -267,12 +267,12 @@ const Profile = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="activity_level">
+                  <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="activity_level">
                     Nivel de Actividad Física
                   </label>
                   <select
                     id="activity_level"
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                     value={formData.activity_level}
                     onChange={handleChange}
                   >
@@ -285,26 +285,26 @@ const Profile = () => {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="target_weight">
+                  <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="target_weight">
                     Peso Objetivo (kg)
                   </label>
                   <input
                     id="target_weight"
                     type="number"
                     step="0.1"
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                     value={formData.target_weight}
                     onChange={handleChange}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold mb-1.5 text-on-surface" htmlFor="food_preference">
+                  <label className="block text-xs font-semibold mb-1.5 text-on-surface dark:text-white" htmlFor="food_preference">
                     Preferencia / Enfoque Dietario
                   </label>
                   <select
                     id="food_preference"
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface dark:text-black"
                     value={formData.food_preference}
                     onChange={handleChange}
                   >

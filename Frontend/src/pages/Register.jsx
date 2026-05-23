@@ -84,14 +84,14 @@ const Register = () => {
                   Nombre Completo *
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
-                    <User size={16} />
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
+                    <User size={18} />
                   </span>
                   <input
                     id="name"
                     type="text"
                     required
-                    className="w-full pl-9 pr-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface text-sm"
+                    className="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface"
                     placeholder="Juan Pérez"
                     value={formData.name}
                     onChange={handleChange}
@@ -104,14 +104,14 @@ const Register = () => {
                   Correo Electrónico *
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
-                    <Mail size={16} />
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
+                    <Mail size={18} />
                   </span>
                   <input
                     id="email"
                     type="email"
                     required
-                    className="w-full pl-9 pr-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface text-sm"
+                    className="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface"
                     placeholder="juan@correo.com"
                     value={formData.email}
                     onChange={handleChange}
@@ -124,14 +124,14 @@ const Register = () => {
                   Contraseña *
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
-                    <KeyRound size={16} />
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
+                    <KeyRound size={18} />
                   </span>
                   <input
                     id="password"
                     type="password"
                     required
-                    className="w-full pl-9 pr-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface text-sm"
+                    className="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface"
                     placeholder="••••••••"
                     value={formData.password}
                     onChange={handleChange}
@@ -150,13 +150,13 @@ const Register = () => {
                     Edad
                   </label>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
-                      <HelpCircle size={16} />
+                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
+                      <HelpCircle size={18} />
                     </span>
                     <input
                       id="age"
                       type="number"
-                      className="w-full pl-9 pr-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface text-sm"
+                      className="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface"
                       placeholder="30"
                       value={formData.age}
                       onChange={handleChange}
@@ -170,7 +170,7 @@ const Register = () => {
                   </label>
                   <select
                     id="gender"
-                    className="w-full px-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface text-sm"
+                    className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface"
                     value={formData.gender}
                     onChange={handleChange}
                   >
@@ -186,14 +186,14 @@ const Register = () => {
                   Peso Actual (kg)
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
-                    <Weight size={16} />
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
+                    <Weight size={18} />
                   </span>
                   <input
                     id="weight"
                     type="number"
                     step="0.1"
-                    className="w-full pl-9 pr-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface text-sm"
+                    className="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface"
                     placeholder="75.5"
                     value={formData.weight}
                     onChange={handleChange}
@@ -206,13 +206,13 @@ const Register = () => {
                   Estatura (cm)
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
-                    <Ruler size={16} />
+                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
+                    <Ruler size={18} />
                   </span>
                   <input
                     id="height"
                     type="number"
-                    className="w-full pl-9 pr-3 py-2.5 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface text-sm"
+                    className="w-full pl-11 pr-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl focus:outline-none text-on-surface"
                     placeholder="175"
                     value={formData.height}
                     onChange={handleChange}
