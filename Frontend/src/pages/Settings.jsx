@@ -62,7 +62,7 @@ const SettingsPage = () => {
     <div className="space-y-8">
       <div>
         <h3 className="font-headline text-lg font-bold">Configuración de NutriAI</h3>
-        <p className="text-xs text-tertiary">Ajusta las preferencias de visualización y gestiona tus datos clínicos</p>
+        <p className="text-xs text-tertiary dark:text-white">Ajusta las preferencias de visualización y gestiona tus datos clínicos</p>
       </div>
 
       {success && (

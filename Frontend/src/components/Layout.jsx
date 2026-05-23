@@ -59,7 +59,7 @@ const Layout = ({ children }) => {
       `}>
         <div className="px-4 py-8">
           <h1 className="font-headline text-3xl font-extrabold text-primary">NutriAI</h1>
-          <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim opacity-70 font-semibold uppercase tracking-wider">Prevención y Longevidad</p>
+          <p className="text-xs text-tertiary dark:text-white opacity-70 font-semibold uppercase tracking-wider">Prevención y Longevidad</p>
         </div>
 
         <nav className="flex-1 space-y-1 px-2">
@@ -75,7 +75,7 @@ const Layout = ({ children }) => {
                   flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 font-semibold text-sm
                   ${isActive 
                     ? 'text-primary bg-primary/10 border-l-4 border-primary rounded-l-none' 
-                    : 'text-on-surface-variant dark:text-tertiary-fixed-dim hover:bg-primary/5 hover:text-primary'
+                    : 'text-on-surface-variant dark:text-white hover:bg-primary/5 hover:text-primary'
                   }
                 `}
               >
@@ -115,7 +115,7 @@ const Layout = ({ children }) => {
           <h2 className="font-headline text-xl md:text-2xl font-bold text-on-surface dark:text-white">{getPageTitle()}</h2>
           
           <div className="flex items-center gap-6">
-            <button className="relative p-2 text-tertiary dark:text-tertiary-fixed-dim hover:bg-surface-container rounded-full transition-colors">
+            <button className="relative p-2 text-tertiary dark:text-white hover:bg-surface-container rounded-full transition-colors">
               <Bell size={20} />
               <span className="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
             </button>

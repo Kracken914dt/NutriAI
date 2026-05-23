@@ -115,7 +115,7 @@ const MealRegister = () => {
       <div className="flex justify-between items-center flex-wrap gap-4">
         <div>
           <h3 className="font-headline text-lg font-bold">Registro de Alimentos Diarios</h3>
-          <p className="text-xs text-tertiary">Lleva la cuenta de tus comidas para el diagnóstico preventivo</p>
+          <p className="text-xs text-tertiary dark:text-white">Lleva la cuenta de tus comidas para el diagnóstico preventivo</p>
         </div>
         <button
           onClick={() => setShowAddForm(!showAddForm)}
@@ -250,24 +250,24 @@ const MealRegister = () => {
 
       {/* Daily Nutrients Summary */}
       <section className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm">
-        <h4 className="font-headline text-md font-bold mb-6 flex items-center gap-2 text-tertiary">
-          <PieChart size={18} className="text-tertiary" /> Consumo Acumulado de Hoy
+        <h4 className="font-headline text-md font-bold mb-6 flex items-center gap-2 text-tertiary dark:text-white">
+          <PieChart size={18} className="text-tertiary dark:text-white" /> Consumo Acumulado de Hoy
         </h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="bg-primary/5 dark:bg-primary/10 border border-primary/10 p-4 rounded-xl">
-            <p className="text-[10px] uppercase font-bold text-tertiary tracking-wider">Calorías</p>
+            <p className="text-[10px] uppercase font-bold text-tertiary dark:text-white tracking-wider">Calorías</p>
             <p className="font-headline text-2xl font-bold mt-1 text-primary">{dailyTotals.calories} kcal</p>
           </div>
           <div className="bg-primary/5 dark:bg-primary/10 border border-primary/10 p-4 rounded-xl">
-            <p className="text-[10px] uppercase font-bold text-tertiary tracking-wider">Proteínas</p>
+            <p className="text-[10px] uppercase font-bold text-tertiary dark:text-white tracking-wider">Proteínas</p>
             <p className="font-headline text-2xl font-bold mt-1 text-secondary">{dailyTotals.proteins} g</p>
           </div>
           <div className="bg-primary/5 dark:bg-primary/10 border border-primary/10 p-4 rounded-xl">
-            <p className="text-[10px] uppercase font-bold text-tertiary tracking-wider">Carbohidratos</p>
+            <p className="text-[10px] uppercase font-bold text-tertiary dark:text-white tracking-wider">Carbohidratos</p>
             <p className="font-headline text-2xl font-bold mt-1 text-tertiary">{dailyTotals.carbs} g</p>
           </div>
           <div className="bg-primary/5 dark:bg-primary/10 border border-primary/10 p-4 rounded-xl">
-            <p className="text-[10px] uppercase font-bold text-tertiary tracking-wider">Grasas</p>
+            <p className="text-[10px] uppercase font-bold text-tertiary dark:text-white tracking-wider">Grasas</p>
             <p className="font-headline text-2xl font-bold mt-1 text-red-500">{dailyTotals.fats} g</p>
           </div>
         </div>
@@ -281,9 +281,9 @@ const MealRegister = () => {
         </div>
         
         {loading ? (
-          <div className="p-12 text-center text-tertiary">Cargando alimentos registrados...</div>
+          <div className="p-12 text-center text-tertiary dark:text-white">Cargando alimentos registrados...</div>
         ) : meals.length === 0 ? (
-          <div className="p-12 text-center text-tertiary flex flex-col items-center justify-center gap-2">
+          <div className="p-12 text-center text-tertiary dark:text-white flex flex-col items-center justify-center gap-2">
             <Info size={32} className="opacity-40" />
             <p className="font-semibold text-sm">No has registrado ninguna comida todavía.</p>
             <p className="text-xs">Usa el botón de arriba para registrar tu primer alimento.</p>

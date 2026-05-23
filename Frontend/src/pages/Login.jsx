@@ -30,7 +30,7 @@ const Login = () => {
   return (
     <div className="bg-background min-h-screen flex flex-col justify-center items-center p-6 relative">
       {/* Back button */}
-      <Link to="/" className="absolute top-8 left-8 flex items-center gap-2 text-tertiary hover:text-primary transition-colors font-medium">
+      <Link to="/" className="absolute top-8 left-8 flex items-center gap-2 text-tertiary dark:text-white hover:text-primary transition-colors font-medium">
         <ArrowLeft size={18} />
         Volver al inicio
       </Link>
@@ -41,7 +41,7 @@ const Login = () => {
       <div className="w-full max-w-md glass-card rounded-3xl p-8 md:p-10 shadow-xl relative z-10">
         <div className="text-center mb-8">
           <h1 className="font-headline text-3xl font-extrabold text-primary mb-2">NutriAI</h1>
-          <p className="text-tertiary text-sm">Ingresa a tu portal de nutrición preventiva</p>
+          <p className="text-tertiary dark:text-white text-sm">Ingresa a tu portal de nutrición preventiva</p>
         </div>
 
         {error && (
@@ -57,7 +57,7 @@ const Login = () => {
               Correo Electrónico
             </label>
             <div className="relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
                 <Mail size={18} />
               </span>
               <input
@@ -77,7 +77,7 @@ const Login = () => {
               Contraseña
             </label>
             <div className="relative">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 text-tertiary dark:text-white">
                 <KeyRound size={18} />
               </span>
               <input
@@ -102,7 +102,7 @@ const Login = () => {
         </form>
 
         <div className="mt-8 text-center border-t border-outline-variant/20 pt-6">
-          <p className="text-sm text-tertiary">
+          <p className="text-sm text-tertiary dark:text-white">
             ¿No tienes una cuenta?{' '}
             <Link to="/register" className="text-primary font-bold hover:underline">
               Regístrate aquí

@@ -186,7 +186,7 @@ const LandingPage = () => {
         <section id="beneficios" className="py-16 px-6 md:px-12 max-w-[1440px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl text-on-surface mb-4 font-bold">Lo que dicen los expertos</h2>
-            <p className="text-tertiary max-w-xl mx-auto">Nutrición basada en ciencia y respaldada por profesionales.</p>
+            <p className="text-tertiary dark:text-white max-w-xl mx-auto">Nutrición basada en ciencia y respaldada por profesionales.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ const LandingPage = () => {
                 />
                 <div>
                   <p className="font-bold text-sm text-on-surface">Dra. Elena Rodríguez</p>
-                  <p className="text-xs text-tertiary">Especialista en Endocrinología</p>
+                  <p className="text-xs text-tertiary dark:text-white">Especialista en Endocrinología</p>
                 </div>
               </div>
             </div>
@@ -229,7 +229,7 @@ const LandingPage = () => {
                 />
                 <div>
                   <p className="font-bold text-sm text-on-surface">Marco Sandoval</p>
-                  <p className="text-xs text-tertiary">Triatleta Profesional</p>
+                  <p className="text-xs text-tertiary dark:text-white">Triatleta Profesional</p>
                 </div>
               </div>
             </div>

@@ -216,7 +216,7 @@ const Dashboard = () => {
         {/* IMC Card */}
         <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex justify-between items-start">
-            <span className="text-tertiary dark:text-tertiary-fixed-dim font-semibold text-sm">IMC (Masa Corporal)</span>
+            <span className="text-tertiary dark:text-white font-semibold text-sm">IMC (Masa Corporal)</span>
             <div className="p-2 bg-primary/10 rounded-lg">
               <span className="material-symbols-outlined text-primary">monitor_weight</span>
             </div>
@@ -232,21 +232,21 @@ const Dashboard = () => {
         {/* Calories Card */}
         <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex justify-between items-start">
-            <span className="text-tertiary dark:text-tertiary-fixed-dim font-semibold text-sm">Consumo de Calorías</span>
+            <span className="text-tertiary dark:text-white font-semibold text-sm">Consumo de Calorías</span>
             <div className="p-2 bg-secondary/10 rounded-lg">
               <Flame className="text-secondary" size={18} />
             </div>
           </div>
           <div className="mt-4">
             <h3 className="font-headline text-3xl font-bold">{caloriesLogged.toLocaleString()}</h3>
-            <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mt-1">Meta: {targetCalories} kcal</p>
+            <p className="text-xs text-tertiary dark:text-white mt-1">Meta: {targetCalories} kcal</p>
           </div>
         </div>
 
         {/* Health Score Card */}
         <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex justify-between items-start">
-            <span className="text-tertiary dark:text-tertiary-fixed-dim font-semibold text-sm">Health Score</span>
+            <span className="text-tertiary dark:text-white font-semibold text-sm">Health Score</span>
             <div className="p-2 bg-primary/10 rounded-lg">
               <Heart className="text-primary fill-primary/30" size={18} />
             </div>
@@ -262,14 +262,14 @@ const Dashboard = () => {
         {/* Weight Tracker Card */}
         <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex justify-between items-start">
-            <span className="text-tertiary dark:text-tertiary-fixed-dim font-semibold text-sm">Peso Actual</span>
+            <span className="text-tertiary dark:text-white font-semibold text-sm">Peso Actual</span>
             <div className="p-2 bg-tertiary/10 rounded-lg">
               <Flag className="text-tertiary" size={18} />
             </div>
           </div>
           <div className="mt-4">
             <h3 className="font-headline text-3xl font-bold">{weight} <span className="text-sm font-normal">kg</span></h3>
-            <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mt-1">Objetivo: {targetWeight} kg</p>
+            <p className="text-xs text-tertiary dark:text-white mt-1">Objetivo: {targetWeight} kg</p>
           </div>
         </div>
       </section>
@@ -281,7 +281,7 @@ const Dashboard = () => {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h3 className="font-headline text-xl font-bold">Historial Calórico</h3>
-              <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim">Últimos 7 días de consumo vs Meta diaria</p>
+              <p className="text-xs text-tertiary dark:text-white">Últimos 7 días de consumo vs Meta diaria</p>
             </div>
             <div className="flex gap-2">
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary">
@@ -350,7 +350,7 @@ const Dashboard = () => {
             <div>
               <div className="flex justify-between text-xs font-semibold mb-2">
                 <span>Proteínas</span>
-                <span className="text-tertiary dark:text-tertiary-fixed-dim">{proteinLogged}g / {proteinGoal}g</span>
+                <span className="text-tertiary dark:text-white">{proteinLogged}g / {proteinGoal}g</span>
               </div>
               <div className="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
                 <div 
@@ -364,7 +364,7 @@ const Dashboard = () => {
             <div>
               <div className="flex justify-between text-xs font-semibold mb-2">
                 <span>Carbohidratos</span>
-                <span className="text-tertiary dark:text-tertiary-fixed-dim">{carbsLogged}g / {Math.round(weight * 3)}g</span>
+                <span className="text-tertiary dark:text-white">{carbsLogged}g / {Math.round(weight * 3)}g</span>
               </div>
               <div className="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
                 <div 
@@ -378,7 +378,7 @@ const Dashboard = () => {
             <div>
               <div className="flex justify-between text-xs font-semibold mb-2">
                 <span>Grasas</span>
-                <span className="text-tertiary dark:text-tertiary-fixed-dim">{fatsLogged}g / {Math.round(weight * 0.8)}g</span>
+                <span className="text-tertiary dark:text-white">{fatsLogged}g / {Math.round(weight * 0.8)}g</span>
               </div>
               <div className="w-full bg-surface-container h-2.5 rounded-full overflow-hidden">
                 <div 
@@ -394,7 +394,7 @@ const Dashboard = () => {
         <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm flex flex-col justify-between">
           <div>
             <h3 className="font-headline text-lg font-bold mb-2">Seguimiento de Hidratación</h3>
-            <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mb-6">Registra tu ingesta de agua hoy (vasos de 250ml)</p>
+            <p className="text-xs text-tertiary dark:text-white mb-6">Registra tu ingesta de agua hoy (vasos de 250ml)</p>
           </div>
           
           <div className="flex flex-col items-center justify-center py-4">
@@ -408,7 +408,7 @@ const Dashboard = () => {
               ))}
             </div>
             <p className="text-xl font-bold text-center mb-6">
-              {waterGlasses} / 8 <span className="text-sm font-normal text-tertiary dark:text-tertiary-fixed-dim">vasos ({waterGlasses * 250} ml)</span>
+              {waterGlasses} / 8 <span className="text-sm font-normal text-tertiary dark:text-white">vasos ({waterGlasses * 250} ml)</span>
             </p>
             
             <div className="flex gap-4 w-full">
@@ -420,7 +420,7 @@ const Dashboard = () => {
               </button>
               <button 
                 onClick={handleResetWater}
-                className="border border-outline-variant hover:bg-slate-50 dark:hover:bg-slate-900 text-tertiary dark:text-tertiary-fixed-dim py-2 px-3 rounded-xl text-xs transition-colors"
+                className="border border-outline-variant hover:bg-slate-50 dark:hover:bg-slate-900 text-tertiary dark:text-white py-2 px-3 rounded-xl text-xs transition-colors"
               >
                 Reiniciar
               </button>

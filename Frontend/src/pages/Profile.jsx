@@ -119,7 +119,7 @@ const Profile = () => {
       <div className="flex justify-between items-center flex-wrap gap-4">
         <div>
           <h3 className="font-headline text-lg font-bold">Perfil Nutricional</h3>
-          <p className="text-xs text-tertiary">Configura tus variables fisiológicas básicas</p>
+          <p className="text-xs text-tertiary dark:text-white">Configura tus variables fisiológicas básicas</p>
         </div>
         {!isEditing && (
           <button
