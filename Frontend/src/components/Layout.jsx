@@ -15,6 +15,7 @@ import {
   Plus, 
   Bell 
 } from 'lucide-react';
+import Avvvatars from 'avvvatars-react';
 
 const Layout = ({ children }) => {
   const { user, logout } = useAuth();
@@ -125,10 +126,10 @@ const Layout = ({ children }) => {
                 <p className="font-bold text-sm text-on-surface dark:text-white">Hola, {user?.name || 'Usuario'}</p>
                 <p className="text-[10px] font-bold text-primary uppercase tracking-wider">NutriAI Premium</p>
               </div>
-              <img 
-                alt="User Profile" 
-                className="w-10 h-10 rounded-full border-2 border-primary-container object-cover" 
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=150"
+              <Avvvatars
+                value={user?.name || 'User'}
+                size={40}
+                className="border-2 border-primary-container"
               />
             </div>
           </div>

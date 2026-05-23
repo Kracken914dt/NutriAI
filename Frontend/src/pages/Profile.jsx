@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '../context/AuthContext';
 import { User, Weight, Ruler, Activity, Award, Heart, HelpCircle, Save, Edit2, AlertCircle } from 'lucide-react';
+import Avvvatars from 'avvvatars-react';
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
@@ -152,12 +153,14 @@ const Profile = () => {
         <section className="lg:col-span-1 space-y-6">
           {/* Main User Card */}
           <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm text-center">
-            <img
-              alt="User Headshot"
-              className="w-24 h-24 rounded-full border-4 border-primary-container object-cover mx-auto mb-4"
-              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=150"
-            />
-            <h4 className="font-headline text-lg font-bold">{profile?.name}</h4>
+            <div className="flex flex-col items-center">
+              <Avvvatars
+                value={profile?.name || 'User'}
+                size={96}
+                className="mb-4 border-4 border-white dark:border-on-tertiary-fixed shadow-lg"
+              />
+              <h4 className="font-headline text-lg font-bold">{profile?.name}</h4>
+            </div>
             <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim uppercase font-bold tracking-wider mt-1">{profile?.email}</p>
             <div className="mt-6 pt-6 border-t border-outline-variant/20 grid grid-cols-2 gap-4 text-center">
               <div>
