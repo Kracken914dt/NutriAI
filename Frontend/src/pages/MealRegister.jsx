@@ -250,23 +250,23 @@ const MealRegister = () => {
 
       {/* Daily Nutrients Summary */}
       <section className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm">
-        <h4 className="font-headline text-md font-bold mb-6 flex items-center gap-2 text-secondary">
-          <PieChart size={18} /> Consumo Acumulado de Hoy
+        <h4 className="font-headline text-md font-bold mb-6 flex items-center gap-2 text-green-400">
+          <PieChart size={18} className="text-green-400" /> Consumo Acumulado de Hoy
         </h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div className="bg-surface-container-low dark:bg-surface-container-lowest p-4 rounded-xl">
+          <div className="bg-primary/5 dark:bg-primary/10 border border-primary/10 p-4 rounded-xl">
             <p className="text-[10px] uppercase font-bold text-green-400 tracking-wider">Calorías</p>
-            <p className="font-headline text-2xl font-bold mt-1 text-primary">{dailyTotals.calories} kcal</p>
+            <p className="font-headline text-2xl font-bold mt-1 text-green-500">{dailyTotals.calories} kcal</p>
           </div>
-          <div className="bg-surface-container-low dark:bg-surface-container-lowest p-4 rounded-xl">
+          <div className="bg-primary/5 dark:bg-primary/10 border border-primary/10 p-4 rounded-xl">
             <p className="text-[10px] uppercase font-bold text-green-400 tracking-wider">Proteínas</p>
             <p className="font-headline text-2xl font-bold mt-1 text-secondary">{dailyTotals.proteins} g</p>
           </div>
-          <div className="bg-surface-container-low dark:bg-surface-container-lowest p-4 rounded-xl">
+          <div className="bg-primary/5 dark:bg-primary/10 border border-primary/10 p-4 rounded-xl">
             <p className="text-[10px] uppercase font-bold text-green-400 tracking-wider">Carbohidratos</p>
             <p className="font-headline text-2xl font-bold mt-1 text-tertiary">{dailyTotals.carbs} g</p>
           </div>
-          <div className="bg-surface-container-low dark:bg-surface-container-lowest p-4 rounded-xl">
+          <div className="bg-primary/5 dark:bg-primary/10 border border-primary/10 p-4 rounded-xl">
             <p className="text-[10px] uppercase font-bold text-green-400 tracking-wider">Grasas</p>
             <p className="font-headline text-2xl font-bold mt-1 text-red-500">{dailyTotals.fats} g</p>
           </div>

@@ -46,3 +46,28 @@ body {
 input, select, textarea {
   @apply focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200;
 }
+
+@layer base {
+  input,
+  select,
+  textarea {
+    color: #000000;
+    caret-color: #37d972;
+  }
+
+  .dark input,
+  .dark select,
+  .dark textarea {
+    color: #dcfce7;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgba(22, 101, 52, 0.45);
+  }
+
+  .dark input::placeholder,
+  .dark textarea::placeholder {
+    color: rgba(220, 252, 231, 0.55);
+  }
+}
