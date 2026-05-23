@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#4ae176",
+                    "on-tertiary-fixed": "#131b2e",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#a4abc4",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#3d4a3d",
+                    "on-surface": "#0b1c30",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-fixed-variant": "#004395",
+                    "surface-container": "#e5eeff",
+                    "tertiary": "#565e74",
+                    "on-error": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#002109",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-container": "#004b1e",
+                    "tertiary-fixed": "#dae2fd",
+                    "surface-container-high": "#dce9ff",
+                    "primary": "#006e2f",
+                    "inverse-surface": "#213145",
+                    "on-secondary-container": "#fefcff",
+                    "primary-fixed": "#6bff8f",
+                    "surface": "#f8f9ff",
+                    "secondary": "#0058be",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "outline": "#6d7b6c",
+                    "surface-tint": "#006e2f",
+                    "secondary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#001a42",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "on-primary-fixed-variant": "#005321",
+                    "on-tertiary-container": "#383f54",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#bccbb9",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-container": "#2170e4",
+                    "surface-bright": "#f8f9ff",
+                    "primary-container": "#22c55e",
+                    "primary-fixed-dim": "#4ae176"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding-desktop": "40px",
+                    "section-gap": "64px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-padding-mobile": "20px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-color: #f8f9ff;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(34, 197, 94, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(33, 112, 228, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-mesh font-body-md text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar Suppressed for Transactional Page, only Logo placeholder remains for identity -->
+<header class="fixed top-0 left-0 w-full h-20 flex items-center px-container-padding-desktop z-50 pointer-events-none">
+<div class="font-headline-md text-headline-md font-extrabold text-primary pointer-events-auto">
+            NutriAI
+        </div>
+</header>
+<main class="flex-grow flex items-center justify-center p-container-padding-mobile lg:p-container-padding-desktop">
+<div class="w-full max-w-[1100px] grid lg:grid-cols-2 gap-12 items-center">
+<!-- Left Side: Login Form -->
+<div class="flex flex-col justify-center order-2 lg:order-1">
+<div class="glass-card p-8 md:p-12 rounded-xl shadow-sm border border-outline-variant/20">
+<div class="mb-8">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Welcome Back</h1>
+<p class="font-body-md text-on-surface-variant">Log in to your NutriAI dashboard to continue your health journey.</p>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant" for="email">Email</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all outline-none" id="email" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="font-label-md text-label-md text-on-surface-variant" for="password">Password</label>
+<a class="font-label-sm text-label-sm text-secondary hover:underline" href="#">Olvidé mi contraseña</a>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-secondary focus:bg-surface-container-lowest transition-all outline-none" id="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-4 rounded-lg shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" type="submit">
+                            Login
+                        </button>
+<div class="relative flex items-center py-4">
+<div class="flex-grow border-t border-outline-variant/30"></div>
+<span class="flex-shrink mx-4 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest">or</span>
+<div class="flex-grow border-t border-outline-variant/30"></div>
+</div>
+<button class="w-full bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-label-md text-label-md py-4 rounded-lg flex items-center justify-center gap-3 hover:bg-surface-container-low transition-colors active:scale-[0.98]" type="button">
+<img alt="Google Logo" class="w-5 h-5" data-alt="The official multi-colored Google logo, clean and minimalist, centered on a white background with soft ambient studio lighting to fit a modern SaaS interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXCkK8dX0vKenKjCEoHe4sXnKVG3SQA0E9z_o1dB_bjYb4855j3v7l8dYW7mJE4zAHKKBIn3JbccrcPmlV4jCieiuAEd1RyX0tWCzPFyiNrnE-H-ls4uvNcw3Of7IUt8VN6GBIgsE3hpO8g4SjVE6agu-DN0zQzLAbPF7RZmPou62r2CD2oI_L6xYVy9dWZZ0-mU4_Wgzv3Mwo4V983NS0BxhspjXsEzyovhWBkb6Br6AclDRjyhARD_e07CbPbsg6Kcz_hiTu4hTh"/>
+                            Continue with Google
+                        </button>
+</form>
+<div class="mt-8 text-center">
+<p class="font-body-md text-on-surface-variant">
+                            Don't have an account? 
+                            <a class="text-primary font-bold hover:underline" href="#">Sign up for free</a>
+</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Illustration & Branding -->
+<div class="hidden lg:flex flex-col order-1 lg:order-2">
+<div class="relative aspect-square rounded-xl overflow-hidden glass-card p-4">
+<img class="w-full h-full object-cover rounded-lg" data-alt="A high-tech digital health visualization featuring a 3D translucent human torso with glowing neural pathways and DNA strands in shades of healthy emerald green and technical sapphire blue. The background is a sterile, minimalist clinic with soft bokeh and volumetric light rays, conveying a sense of advanced medical technology and precision AI-driven wellness. The overall aesthetic is clean, sophisticated, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxI6jgBt_px-8KihBSKHQcckgJVnn5WzlEqCAvis2AzDHoNmVQxHnV_BFNRyRk5WbN5l6k7_kAp7675IjNOxGk589TvGn1ddHdIMbXpl_JNdET14mfRMYWaGVdk1uye7x7RPXTaKbTwldMidiiz6pqIn0REn7FGPBLPcnycbeklPjcywZVLTqmrssJv2blZ_u-Ck6u6H4wIKHJkNKslEBI9pzSGaRBJzGhkIQueMokzj9r-VhctC_HFPQh4nBo0gRbnhKAb_CG68i3"/>
+<!-- Floating Data Points (Glassmorphic Widgets) -->
+<div class="absolute top-12 left-12 glass-card p-4 rounded-lg shadow-md border border-white/40 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Precision Index</p>
+<p class="font-headline-md text-headline-md text-on-surface">98.4%</p>
+</div>
+</div>
+<div class="absolute bottom-12 right-12 glass-card p-4 rounded-lg shadow-md border border-white/40 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Analysis Rate</p>
+<p class="font-headline-md text-headline-md text-on-surface">Real-time</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Precision Nutrition for Longevity</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">NutriAI leverages clinical-grade algorithms to optimize your daily intake based on real-time biometric data.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Transactional Footer -->
+<footer class="py-8 px-container-padding-desktop">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 border-t border-outline-variant/10 pt-8">
+<p class="font-label-sm text-label-sm text-on-surface-variant">
+                © 2024 NutriAI. Precision Nutrition for Longevity.
+            </p>
+<div class="flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#4ae176",
+                        "on-tertiary-fixed": "#131b2e",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#3f465c",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#a4abc4",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#3d4a3d",
+                        "on-surface": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "surface-dim": "#cbdbf5",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-container": "#e5eeff",
+                        "tertiary": "#565e74",
+                        "on-error": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#002109",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-primary-container": "#004b1e",
+                        "tertiary-fixed": "#dae2fd",
+                        "surface-container-high": "#dce9ff",
+                        "primary": "#006e2f",
+                        "inverse-surface": "#213145",
+                        "on-secondary-container": "#fefcff",
+                        "primary-fixed": "#6bff8f",
+                        "surface": "#f8f9ff",
+                        "secondary": "#0058be",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9ff",
+                        "surface-variant": "#d3e4fe",
+                        "outline": "#6d7b6c",
+                        "surface-tint": "#006e2f",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-secondary-fixed": "#001a42",
+                        "tertiary-fixed-dim": "#bec6e0",
+                        "on-primary-fixed-variant": "#005321",
+                        "on-tertiary-container": "#383f54",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#bccbb9",
+                        "inverse-on-surface": "#eaf1ff",
+                        "secondary-container": "#2170e4",
+                        "surface-bright": "#f8f9ff",
+                        "primary-container": "#22c55e",
+                        "primary-fixed-dim": "#4ae176"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding-desktop": "40px",
+                        "section-gap": "64px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "container-padding-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.03);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/70 backdrop-blur-md dark:bg-on-tertiary-fixed/70 docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-200">
+<div class="flex justify-between items-center w-full px-container-padding-desktop max-w-[1440px] mx-auto h-20">
+<div class="flex items-center gap-8">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">NutriAI</span>
+<nav class="hidden md:flex gap-6">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Inicio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Funciones</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Beneficios</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-200 active:scale-95">Login</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md font-bold transition-all duration-200 active:scale-95 shadow-sm hover:shadow-md">Registro</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 overflow-hidden px-container-padding-mobile md:px-container-padding-desktop max-w-[1440px] mx-auto">
+<div class="grid lg:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm mb-6">
+                        Impulsado por Inteligencia Artificial
+                    </span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-6 tracking-tight leading-tight">
+                        Tu asistente inteligente de <span class="text-primary">nutrición preventiva</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Optimiza tu salud con análisis biomecánicos y planes personalizados generados por IA. NutriAI traduce datos médicos complejos en acciones diarias para tu longevidad.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md font-bold transition-all duration-200 active:scale-95 shadow-lg flex items-center gap-2">
+                            Comenzar ahora
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-low text-secondary px-8 py-4 rounded-full font-label-md text-label-md font-bold transition-all duration-200 active:scale-95 flex items-center gap-2 border border-outline-variant/30">
+                            Ver Ciencia
+                        </button>
+</div>
+</div>
+<div class="relative mt-12 lg:mt-0">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl"></div>
+<div class="glass-card p-4 rounded-3xl relative">
+<img alt="AI Medical Interface" class="rounded-2xl w-full h-auto object-cover" data-alt="A futuristic medical user interface displaying complex holographic nutritional data, DNA strands, and molecular structures. The visual style is minimalist and clean with a palette of soft greens, tech blues, and clinical whites. The lighting is high-key and professional, evoking a sense of advanced medical technology and wellness precision for a modern SaaS platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHSPevYrBqjlt9FMW5RPRT6QEwfm2LOWb0rTR2_PyKAktuVp33UCv63rcsYdiwoEitmZgwOdJ2XNFnL2wOL9tJl_ZjgoIOZmeeSTH8tTNYOY76mY8q5doa8f3c602zUAqN9hdf8c0K5QKqXpHl1aR2zsnJ_Frtw90MoV9IlHWyb3QGqftShE6KTi59MtFJ3qdpApKSFOoJOwffvmaJrQlcoG30b5kaOTHSTgxABQqx3cd2gh5KlRyLH2fvj0xpO_qPN4-1HTogLoUP"/>
+<!-- Floating Glass Widget -->
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl hidden md:block max-w-[240px]">
+<div class="flex items-center gap-3 mb-2">
+<span class="p-2 bg-primary/10 rounded-lg text-primary material-symbols-outlined">health_metrics</span>
+<span class="font-label-md text-label-md font-bold">Salud Metabólica</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full mb-2">
+<div class="bg-primary h-full w-[85%] rounded-full"></div>
+</div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">+15% mejora esta semana</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-[1440px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Funciones de precisión</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Tecnología de grado clínico diseñada para ser intuitiva y personal.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Feature -->
+<div class="md:col-span-2 glass-card p-10 rounded-[32px] flex flex-col justify-between overflow-hidden relative group">
+<div class="z-10">
+<span class="p-3 bg-primary/10 rounded-2xl text-primary material-symbols-outlined mb-6">analytics</span>
+<h3 class="font-headline-md text-headline-md mb-4">Análisis nutricional profundo</h3>
+<p class="text-on-surface-variant max-w-sm">Escaneamos tus biomarcadores para entender exactamente qué necesita tu cuerpo en tiempo real.</p>
+</div>
+<div class="mt-8 transform group-hover:scale-105 transition-transform duration-500">
+<img alt="Data Analytics" class="rounded-xl shadow-sm" data-alt="A clean dashboard interface showing intricate health analytics charts and graphs. The primary colors are healthy green and soft blue on a minimalist white background. The scene is bright and professional, highlighting high-tech data visualization with a soft glassmorphic depth and elegant typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcbfj4xh5BdbMEmRfbadaKyjLZcXIsKuBzAr3AbP_wFNCyGrGvUK2xrg90HH5UDyXZNgiLkAwsNeVTQU_gh7Nk9xua1QXk5ZeiaRN9uwgUxVrgn8vtuLXUZczwlQg9q85ig1ayTtNj76bqKDuPvIGN6DF5cWgB1VmgDQI2eRFMHFlst-h9Vdn41iTyBXvOMQY6Rm6iDlBJtDXZnoTzGp2vxeCUH8WjKjnad3ncd9HmOzZJGo7CzR2hrrAecjqDTqoJAoCMorB5IM_e"/>
+</div>
+</div>
+<!-- Vertical Feature -->
+<div class="bg-primary text-on-primary p-10 rounded-[32px] flex flex-col">
+<span class="p-3 bg-white/20 rounded-2xl text-on-primary material-symbols-outlined mb-6 w-fit">psychology</span>
+<h3 class="font-headline-md text-headline-md mb-4">Recomendaciones IA</h3>
+<p class="text-on-primary/80 mb-8">Algoritmos de aprendizaje profundo que adaptan tu dieta basándose en tus niveles de energía y estrés.</p>
+<div class="mt-auto pt-6 border-t border-white/20">
+<a class="font-label-md text-label-md flex items-center gap-2" href="#">
+                            Saber más <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Small Feature 1 -->
+<div class="glass-card p-8 rounded-[32px]">
+<span class="p-3 bg-secondary/10 rounded-2xl text-secondary material-symbols-outlined mb-6">trending_up</span>
+<h3 class="font-headline-md text-headline-md mb-2">Seguimiento</h3>
+<p class="text-on-surface-variant">Visualiza tu progreso con reportes semanales detallados sobre tu salud celular.</p>
+</div>
+<!-- Small Feature 2 -->
+<div class="glass-card p-8 rounded-[32px] md:col-span-2 flex items-center gap-8">
+<div class="flex-1">
+<span class="p-3 bg-tertiary/10 rounded-2xl text-tertiary material-symbols-outlined mb-6">restaurant</span>
+<h3 class="font-headline-md text-headline-md mb-2">Planes alimenticios inteligentes</h3>
+<p class="text-on-surface-variant">Menús personalizados que se sincronizan con tu calendario y preferencias locales.</p>
+</div>
+<div class="hidden sm:block w-1/3">
+<img alt="Healthy Food" class="rounded-2xl h-32 w-full object-cover" data-alt="Close-up of a vibrant, healthy Mediterranean salad with fresh greens, avocados, and grilled salmon. The lighting is natural and bright, creating a crisp and appetizing look. The background is a clean white marble surface, maintaining the minimalist and professional wellness aesthetic of the platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQQbxgO7RX7GPCiR1PSJEmsc-xw_uVIVko3E8HFt5R15Kzy9vlqiuLmFvbxLKPuTh6rvACDD-mUE6VISR7sThxJUWMXOSXOnigimF4fw8DPvtD-P10OGksym9-8xOAiP1_0jBm83VhLmoCFz911Ha_LUZI_S3y866WVCUX0wdoYBnohH_8WSZJ-k7WdJso44QEFHYmQWpKNYHm06sp2R0T48__6_1iuOrUhx2aVGmfxVpv3EGBO0khLjCTLkVMZD5dqZ8IQjnBd2xB"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics Section -->
+<section class="bg-on-tertiary-fixed text-on-tertiary py-24 px-container-padding-mobile md:px-container-padding-desktop">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter text-center">
+<div>
+<div class="font-display-lg text-display-lg text-primary-fixed mb-2">50k+</div>
+<div class="font-label-md text-label-md text-tertiary-fixed-dim uppercase tracking-widest">Usuarios Activos</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-primary-fixed mb-2">1.2M</div>
+<div class="font-label-md text-label-md text-tertiary-fixed-dim uppercase tracking-widest">Planes Generados</div>
+</div>
+<div>
+<div class="font-display-lg text-display-lg text-primary-fixed mb-2">94%</div>
+<div class="font-label-md text-label-md text-tertiary-fixed-dim uppercase tracking-widest">Mejoras de Salud</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap px-container-padding-mobile md:px-container-padding-desktop max-w-[1440px] mx-auto overflow-hidden">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Lo que dicen los expertos</h2>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="glass-card p-10 rounded-[32px] flex-1">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface mb-8 italic">"La precisión de los análisis de NutriAI es comparable a una consulta clínica de alto nivel. Ha transformado la forma en que mis pacientes gestionan su alimentación."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Dr. Elena R." data-alt="Professional headshot of a female doctor in a white coat, looking confident and approachable. The background is a blurred high-end medical clinic. The lighting is soft and flattering, maintaining a professional and sterile yet welcoming aesthetic consistent with a health-tech brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd5zYv5zgXn8G4cuJpfExCpQWG0RGSelAB0y4RbTpdT0nbuDUZPzh6dzsIgzEPtF9cuLRKrmvCF_Om1Pc8xyNkrBXtgd8Peg4mcKl9mF0K7Y7iKoX2dUfpRsecVfocksSVj2CGXlb2VB1YZESMpBKwQsLYceRqv2Cohn15d0YdqfUeMTytggU_6punkE2HdGNx7PFhHqjLjHWEjo-cRkWEsZ6mvfIISVjA-pw9JkaUXs4IcJoMgJMjawk9CG8JmUGAFajEagUXDzPC"/>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold">Dra. Elena Rodríguez</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Especialista en Endocrinología</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-[32px] flex-1">
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface mb-8 italic">"NutriAI elimina las conjeturas de la nutrición. La IA entiende mis objetivos de rendimiento atlético mejor que cualquier aplicación que haya usado antes."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Marco S." data-alt="Headshot of a professional male athlete in modern sports gear, smiling confidently. The lighting is bright and outdoor-inspired, conveying energy and health. The image follows the clean, high-contrast, and modern aesthetic of the NutriAI brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWqfjb351QF6aS-ZEdM53C0-bn2tdwjk15PVQvXm_dueRzfFq_EUg0F__mazHmYmSvja-qufsy1yqISB26TKWpOXL0Ae41-gDIXc3eo4VCg6l1GL-CIUQIMzNdefTFPqDQtLMCJjUJvTj9VnO8IoA2mVjIhQdrpQFYK_g2NWVBgrrvMzZGEKRG-j2DiMhGt712YJckP2F2Dq6dIgV8lY4gNQ8_c_LGJcsFZ9QJ28GeNHZt_nQpGjIJliAdhEZhm0_BIys9zcAk5Xwg"/>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold">Marco Sandoval</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Triatleta Profesional</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="py-section-gap px-container-padding-mobile">
+<div class="max-w-[1100px] mx-auto bg-primary rounded-[48px] p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<div class="relative z-10">
+<h2 class="font-display-lg text-display-lg text-on-primary mb-6">¿Listo para hackear tu longevidad?</h2>
+<p class="text-on-primary/80 font-body-lg text-body-lg mb-10 max-w-2xl mx-auto">Únete a miles de profesionales que ya están optimizando su salud con inteligencia artificial.</p>
+<button class="bg-white text-primary px-10 py-5 rounded-full font-label-md text-label-md font-bold transition-all duration-200 active:scale-95 shadow-xl hover:bg-surface-container-low">
+                        Empezar Prueba Gratuita
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-tertiary-fixed dark:bg-surface-container-lowest text-on-tertiary dark:text-on-surface w-full py-section-gap border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding-desktop max-w-[1440px] mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary mb-6 block">NutriAI</span>
+<p class="text-tertiary-fixed-dim font-label-sm text-label-sm leading-relaxed">
+                    © 2024 NutriAI. Precision Nutrition for Longevity. Tecnología avanzada para una vida más saludable.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-white">Producto</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="text-tertiary-fixed-dim font-label-sm text-label-sm hover:text-primary-fixed transition-colors" href="#">Funciones</a></li>
+<li><a class="text-tertiary-fixed-dim font-label-sm text-label-sm hover:text-primary-fixed transition-colors" href="#">Planes</a></li>
+<li><a class="text-tertiary-fixed-dim font-label-sm text-label-sm hover:text-primary-fixed transition-colors" href="#">Ciencia</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-white">Compañía</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="text-tertiary-fixed-dim font-label-sm text-label-sm hover:text-primary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-tertiary-fixed-dim font-label-sm text-label-sm hover:text-primary-fixed transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-tertiary-fixed-dim font-label-sm text-label-sm hover:text-primary-fixed transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-6 text-white">Legal</h4>
+<ul class="flex flex-col gap-4">
+<li><a class="text-tertiary-fixed-dim font-label-sm text-label-sm hover:text-primary-fixed transition-colors" href="#">API Documentation</a></li>
+<li><a class="text-tertiary-fixed-dim font-label-sm text-label-sm hover:text-primary-fixed transition-colors" href="#">Soporte</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>

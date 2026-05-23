@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriAI - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus_Jakarta_Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#4ae176",
+                    "on-tertiary-fixed": "#131b2e",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#a4abc4",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#3d4a3d",
+                    "on-surface": "#0b1c30",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "surface-dim": "#cbdbf5",
+                    "on-secondary-fixed-variant": "#004395",
+                    "surface-container": "#e5eeff",
+                    "tertiary": "#565e74",
+                    "on-error": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#002109",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-container": "#004b1e",
+                    "tertiary-fixed": "#dae2fd",
+                    "surface-container-high": "#dce9ff",
+                    "primary": "#006e2f",
+                    "inverse-surface": "#213145",
+                    "on-secondary-container": "#fefcff",
+                    "primary-fixed": "#6bff8f",
+                    "surface": "#f8f9ff",
+                    "secondary": "#0058be",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9ff",
+                    "surface-variant": "#d3e4fe",
+                    "outline": "#6d7b6c",
+                    "surface-tint": "#006e2f",
+                    "secondary-fixed": "#d8e2ff",
+                    "on-secondary-fixed": "#001a42",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "on-primary-fixed-variant": "#005321",
+                    "on-tertiary-container": "#383f54",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "on-secondary": "#ffffff",
+                    "outline-variant": "#bccbb9",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-container": "#2170e4",
+                    "surface-bright": "#f8f9ff",
+                    "primary-container": "#22c55e",
+                    "primary-fixed-dim": "#4ae176"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding-desktop": "40px",
+                    "section-gap": "64px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-padding-mobile": "20px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F9FAFB;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen text-on-surface font-body-md overflow-x-hidden">
+<!-- SideNavBar Anchor -->
+<aside class="hidden md:flex flex-col h-full p-base bg-surface-container dark:bg-on-tertiary-fixed fixed left-0 top-0 h-screen w-[280px] border-r border-outline-variant/20 shadow-md z-40">
+<div class="mb-10 px-4">
+<h1 class="font-headline-md text-headline-md font-extrabold text-primary">NutriAI</h1>
+<p class="text-on-surface-variant text-label-sm">Health Pro</p>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-label-md">Meal Plans</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-md">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-label-md">Chatbot</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md">Profile</span>
+</a>
+<!-- Active State for Settings -->
+<a class="flex items-center gap-3 px-4 py-3 text-primary bg-primary-container/20 border-l-4 border-primary rounded-r-full" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant/10 pt-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-md">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-[280px] p-container-padding-mobile md:p-container-padding-desktop max-w-[1440px] mx-auto">
+<!-- Top Title Section -->
+<header class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Settings</h2>
+<p class="text-on-surface-variant font-body-md">Configure your personalized nutrition ecosystem and security.</p>
+</div>
+<button class="bg-primary text-on-primary font-label-md px-6 py-3 rounded-full flex items-center gap-2 hover:opacity-90 transition-all active:scale-95 shadow-lg shadow-primary/20">
+                Save Changes
+            </button>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Primary Sections -->
+<div class="lg:col-span-8 space-y-gutter">
+<!-- Section: Edit Profile -->
+<section class="glass-card p-gutter rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="person_edit">person_edit</span>
+<h3 class="font-headline-md text-headline-md">Edit Profile</h3>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start mb-8">
+<div class="relative">
+<img alt="User Profile" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-surface-container" data-alt="A professional headshot of a young female nutritionist in a bright, airy office setting. The lighting is soft and natural, emphasizing a clean and approachable professional aesthetic. The background is a minimalist medical clinic with subtle green plants, creating a serene and healthy atmosphere in line with modern SaaS design principles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLY0TXrDfBADwCGWZeAUeI36NwArqc0VzsbnKZOhVTeCiX9wZ431KFaSWd1bJo0ZVUBrxqDMcNGANsHqwVTKXIY9CcoWansX1DStw08PyO2ASVLGBJOqk1ONNBP8AWoMzyHDCgmVVszY4QS6E1h3KuBMY4PhBU4yMvw65HudF56ETBf1XTQZs55pFK0QPCgES-YWsGfHMKH3-XX6_KK3B_n_m0WSjvdcDUkdMUM9xA2SEYC8uMFL85W7TY7f4dEjB3AWTa71ijtvWa"/>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-2 rounded-full shadow-md">
+<span class="material-symbols-outlined text-sm" data-icon="photo_camera">photo_camera</span>
+</button>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant ml-1">Full Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-secondary focus:bg-white text-body-md px-4 py-3" type="text" value="Sarah Jenkins"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant ml-1">Email Address</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-secondary focus:bg-white text-body-md px-4 py-3" type="email" value="sarah.j@nutriai.io"/>
+</div>
+<div class="space-y-1 md:col-span-2">
+<label class="font-label-sm text-on-surface-variant ml-1">Bio</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-secondary focus:bg-white text-body-md px-4 py-3" rows="3">Health professional focused on longevity and precision nutrition. Marathon runner and plant-based enthusiast.</textarea>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Nutritional Preferences -->
+<section class="glass-card p-gutter rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="nutrition">nutrition</span>
+<h3 class="font-headline-md text-headline-md">Nutritional Preferences</h3>
+</div>
+<div class="space-y-6">
+<div>
+<p class="font-label-md text-on-surface mb-3">Dietary Approach</p>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full border border-primary bg-primary/10 text-primary font-label-md transition-all">Keto</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md hover:bg-surface-variant/50 transition-all">Paleo</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md hover:bg-surface-variant/50 transition-all">Vegan</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md hover:bg-surface-variant/50 transition-all">Mediterranean</button>
+<button class="px-4 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md hover:bg-surface-variant/50 transition-all">Low Carb</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant ml-1">Target Calories / Day</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-secondary focus:bg-white text-body-md px-4 py-3" type="number" value="2400"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant ml-1">Allergies</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-secondary focus:bg-white text-body-md px-4 py-3" placeholder="e.g. Peanuts, Shellfish" type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Security -->
+<section class="glass-card p-gutter rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+<h3 class="font-headline-md text-headline-md">Security</h3>
+</div>
+<div class="space-y-4">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center p-4 rounded-lg bg-surface-container-low gap-4">
+<div>
+<p class="font-label-md text-on-surface">Change Password</p>
+<p class="text-label-sm text-on-surface-variant">Update your account password for better security.</p>
+</div>
+<button class="px-4 py-2 border border-secondary text-secondary font-label-md rounded-lg hover:bg-secondary/5 transition-all">Update</button>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center p-4 rounded-lg bg-surface-container-low gap-4">
+<div>
+<p class="font-label-md text-on-surface">Two-Factor Authentication</p>
+<p class="text-label-sm text-on-surface-variant">Add an extra layer of protection to your NutriAI account.</p>
+</div>
+<div class="flex items-center">
+<span class="mr-3 font-label-sm text-on-surface-variant">Disabled</span>
+<div class="w-12 h-6 bg-outline-variant rounded-full relative cursor-pointer">
+<div class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Secondary Settings & Integrations -->
+<div class="lg:col-span-4 space-y-gutter">
+<!-- Section: App Settings -->
+<section class="glass-card p-gutter rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="tune">tune</span>
+<h3 class="font-headline-md text-headline-md">App Settings</h3>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-on-surface">Dark Mode</span>
+<div class="w-12 h-6 bg-outline-variant rounded-full relative cursor-pointer">
+<div class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full"></div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-on-surface">Push Notifications</span>
+<div class="w-12 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 bg-white w-4 h-4 rounded-full"></div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-on-surface">Weekly Reports</span>
+<div class="w-12 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 bg-white w-4 h-4 rounded-full"></div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<label class="font-label-sm text-on-surface-variant mb-2 block">Language</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-secondary text-body-md px-4 py-3">
+<option>English (US)</option>
+<option>Spanish</option>
+<option>German</option>
+<option>French</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Section: Smartwatch Integration -->
+<section class="glass-card p-gutter rounded-xl shadow-sm border-l-4 border-primary">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="watch">watch</span>
+<h3 class="font-headline-md text-headline-md">Smartwatch</h3>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-low">
+<img alt="Smartwatch" class="w-12 h-12 rounded-lg object-cover" data-alt="A sleek, modern smartwatch displaying health biometric data like heart rate and step count. The device rests on a clean, white marble surface with soft, high-tech lighting that highlights its metallic edges and vibrant digital screen. The aesthetic is ultra-minimalist and professional, conveying a sense of advanced health tracking and seamless technological integration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOcrg1_PR8tLBiIcJz0mx3zKO69_9TBuE6BDoBqKZxkug2PH8G_rNdgsFjVetvLlf5Bj_pkxwYjp_zg-dBSgFVbhzS97de5CY-tZ9QU9wvIpOXaw392tI4VYtj6TVg9qRhw5Nngze2vwzjw5CSEGkbBk-YMhguN2pKFHRDt3FA5HzNapHCDq20pfpu5KwyiOdAR6eqwohP4GBuja98qBGmdNLBFLx_NhWvl223KQ-dVdc7khyfXM0ULE2P6r-0HFKuZ9BADAW5DadH"/>
+<div class="flex-1">
+<p class="font-label-md text-on-surface">Apple Watch</p>
+<p class="text-label-sm text-primary font-bold">Connected</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="sync">sync</span>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-lg border border-dashed border-outline-variant hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="add">add</span>
+</div>
+<p class="font-label-md text-on-surface-variant">Pair another device</p>
+</div>
+<div class="p-4 bg-primary/5 rounded-lg">
+<p class="text-label-sm text-primary-container font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="info">info</span>
+                                Auto-sync activity data
+                            </p>
+<p class="text-label-sm text-on-surface-variant mt-1">NutriAI automatically adjusts calorie targets based on your real-time activity levels from your watch.</p>
+</div>
+</div>
+</section>
+<!-- Danger Zone -->
+<section class="p-gutter rounded-xl border border-error/20 bg-error/5">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-error" data-icon="report_problem">report_problem</span>
+<h3 class="font-label-md text-error font-bold">Danger Zone</h3>
+</div>
+<p class="text-label-sm text-on-surface-variant mb-4">Deleting your account is permanent. All your health data and history will be wiped.</p>
+<button class="w-full py-3 border border-error text-error font-label-md rounded-lg hover:bg-error hover:text-white transition-all">Delete Account</button>
+</section>
+</div>
+</div>
+<!-- Footer Anchor -->
+<footer class="mt-section-gap pt-10 border-t border-outline-variant/10 w-full py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-[1440px] mx-auto bg-on-tertiary-fixed dark:bg-surface-container-lowest p-gutter rounded-t-3xl text-on-tertiary">
+<div class="md:col-span-1">
+<h4 class="font-headline-md text-headline-md text-primary mb-4">NutriAI</h4>
+<p class="font-label-sm text-label-sm text-tertiary-fixed-dim">Precision Nutrition for Longevity.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-fixed hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-fixed hover:underline transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-fixed hover:underline transition-all" href="#">Contact</a>
+<a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-fixed hover:underline transition-all" href="#">API Documentation</a>
+</div>
+<div class="text-right flex flex-col justify-end">
+<p class="font-label-sm text-label-sm text-tertiary-fixed-dim opacity-50">© 2024 NutriAI.</p>
+</div>
+</footer>
+</main>
+<!-- Mobile Navigation Shell (Only visible on small screens) -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/70 backdrop-blur-md border-t border-outline-variant/30 flex justify-around items-center h-16 px-4 z-50">
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="text-[10px] font-label-sm">Plans</span>
+</a>
+<a class="flex flex-col items-center text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-[10px] font-label-sm">Settings</span>
+</a>
+<a class="flex flex-col items-center text-on-surface-variant" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-label-sm">Profile</span>
+</a>
+</div>
+</body></html>

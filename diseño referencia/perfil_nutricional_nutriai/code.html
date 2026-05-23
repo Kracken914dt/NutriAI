@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nutritional Profile | NutriAI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        body {
+            background-color: #F9FAFB;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#4ae176",
+                      "on-tertiary-fixed": "#131b2e",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#3f465c",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#a4abc4",
+                      "error": "#ba1a1a",
+                      "on-surface-variant": "#3d4a3d",
+                      "on-surface": "#0b1c30",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#eff4ff",
+                      "surface-dim": "#cbdbf5",
+                      "on-secondary-fixed-variant": "#004395",
+                      "surface-container": "#e5eeff",
+                      "tertiary": "#565e74",
+                      "on-error": "#ffffff",
+                      "on-background": "#0b1c30",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed": "#002109",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-primary-container": "#004b1e",
+                      "tertiary-fixed": "#dae2fd",
+                      "surface-container-high": "#dce9ff",
+                      "primary": "#006e2f",
+                      "inverse-surface": "#213145",
+                      "on-secondary-container": "#fefcff",
+                      "primary-fixed": "#6bff8f",
+                      "surface": "#f8f9ff",
+                      "secondary": "#0058be",
+                      "surface-container-lowest": "#ffffff",
+                      "background": "#f8f9ff",
+                      "surface-variant": "#d3e4fe",
+                      "outline": "#6d7b6c",
+                      "surface-tint": "#006e2f",
+                      "secondary-fixed": "#d8e2ff",
+                      "on-secondary-fixed": "#001a42",
+                      "tertiary-fixed-dim": "#bec6e0",
+                      "on-primary-fixed-variant": "#005321",
+                      "on-tertiary-container": "#383f54",
+                      "secondary-fixed-dim": "#adc6ff",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#bccbb9",
+                      "inverse-on-surface": "#eaf1ff",
+                      "secondary-container": "#2170e4",
+                      "surface-bright": "#f8f9ff",
+                      "primary-container": "#22c55e",
+                      "primary-fixed-dim": "#4ae176"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-padding-desktop": "40px",
+                      "section-gap": "64px",
+                      "base": "8px",
+                      "gutter": "24px",
+                      "container-padding-mobile": "20px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "label-sm": ["Inter"],
+                      "display-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface bg-background min-h-screen flex">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="fixed left-0 top-0 h-screen w-[280px] bg-surface-container dark:bg-on-tertiary-fixed border-r border-outline-variant/20 shadow-md flex flex-col p-base z-40">
+<div class="px-4 py-8">
+<h1 class="font-headline-md text-headline-md font-extrabold text-primary">NutriAI</h1>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Health Pro</p>
+</div>
+<nav class="flex-1 space-y-2 px-2">
+<!-- Active State Logic: Profile is the active tab -->
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span> Meal Plans
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span> Analytics
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span> Chatbot
+            </a>
+<!-- ACTIVE TAB -->
+<a class="flex items-center gap-3 px-4 py-3 text-primary bg-primary-container/20 border-l-4 border-primary rounded-r-full font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span> Profile
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Settings
+            </a>
+</nav>
+<div class="mt-auto px-2 pb-4 space-y-2">
+<button class="w-full bg-primary text-on-primary py-3 px-4 rounded-xl font-label-md text-label-md shadow-sm transition-all active:scale-95 flex items-center justify-center gap-2 mb-6">
+<span class="material-symbols-outlined" data-icon="add">add</span> Log Daily Meal
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-variant/50 rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span> Support
+            </a>
+<a class="flex items-center gap-3 px-4 py-2 text-error hover:bg-error-container/20 rounded-lg transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span> Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[280px] flex-1 min-h-screen">
+<!-- Header / Actions Area -->
+<header class="h-20 glass-panel sticky top-0 z-30 px-container-padding-desktop flex items-center justify-between">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Nutritional Profile</h2>
+<button class="flex items-center gap-2 bg-surface-container-lowest border border-outline-variant/30 px-6 py-2.5 rounded-full text-primary font-label-md text-label-md hover:bg-surface-container-low transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined" data-icon="edit">edit</span> Editar perfil
+            </button>
+</header>
+<div class="p-container-padding-desktop max-w-[1440px] mx-auto">
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Profile Identity Card (Glassmorphic Level 2) -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/30 shadow-[0px_4px_20px_rgba(0,0,0,0.03)] flex flex-col items-center text-center">
+<div class="relative mb-6">
+<img alt="Profile" class="w-32 h-32 rounded-full border-4 border-primary-container object-cover" data-alt="A professional headshot of a middle-aged male with a friendly, intelligent expression, clean-shaven and wearing professional business casual attire. The background is a soft, out-of-focus modern office setting with bright daylighting. The image has a clean, high-key aesthetic with a cool color temperature to match the professional medical wellness platform UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP6M_kEUuOcSzCYcZZxI5QyZu-_q1WqhL_VuWuAAdZTtJTEqC6myuVbNQgkOeb9YqPTKp9FZHc9Q8FDRcAsx0B-fd6gzpv6SuQMnwxWiANy6suOn4ivj6JPJiJlnelIWixqClTp7NuMlVe5f6sE36Kz0EqXJvLhkZqJ4O_PMknOP0U23IrLUW1-Q45F8H01gxEYQsTx1M-NO9GCSC5te7h8J5CASHyoiThV9cw7utWJHQO2CYD-MEHB6DkUWOYAYUD9N2tQUNpp1fc"/>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary w-8 h-8 rounded-full flex items-center justify-center border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md mb-1">Dr. Alexander Thorne</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Health Optimization Member since 2023</p>
+<div class="w-full space-y-4 pt-6 border-t border-outline-variant/10">
+<div class="flex justify-between items-center px-4 py-3 bg-surface-container-low rounded-lg">
+<span class="text-on-surface-variant font-label-md text-label-md">Status</span>
+<span class="text-primary font-bold font-label-md text-label-md flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span> Optimal
+                            </span>
+</div>
+<div class="flex justify-between items-center px-4 py-3 bg-surface-container-low rounded-lg">
+<span class="text-on-surface-variant font-label-md text-label-md">AI Insight</span>
+<span class="text-secondary font-bold font-label-md text-label-md">94% Accuracy</span>
+</div>
+</div>
+</div>
+<!-- Physical Stats & Visual Health (Level 1) -->
+<div class="col-span-12 lg:col-span-8 space-y-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Weight -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-lg bg-primary-container/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="weight">weight</span>
+</div>
+<span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Weight</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-on-surface">78.5 <span class="text-body-md text-on-surface-variant">kg</span></p>
+<p class="text-primary font-label-sm text-label-sm mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_downward">arrow_downward</span> 1.2kg vs last week
+                            </p>
+</div>
+<!-- BMI -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="monitor_weight">monitor_weight</span>
+</div>
+<span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">BMI</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-on-surface">23.4</p>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full mt-4 overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%;"></div>
+</div>
+<p class="text-on-surface-variant font-label-sm text-label-sm mt-2">Normal Range</p>
+</div>
+<!-- Height -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-6 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/30 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="straighten">straighten</span>
+</div>
+<span class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">Height</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-on-surface">184 <span class="text-body-md text-on-surface-variant">cm</span></p>
+<p class="text-on-surface-variant font-label-sm text-label-sm mt-2">Stable Growth</p>
+</div>
+</div>
+<!-- Goals Section (Asymmetric Layout) -->
+<div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm">
+<div class="flex items-center justify-between mb-8">
+<h4 class="font-headline-md text-headline-md">Nutritional Objectives</h4>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full font-label-sm text-label-sm">Primary: Metabolic Health</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Lose Weight -->
+<div class="p-6 rounded-xl border-2 border-outline-variant/20 hover:border-primary/40 transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="trending_down">trending_down</span>
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant/40 group-hover:bg-primary group-hover:border-primary transition-all"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold mb-1">Lose weight</p>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Caloric deficit, fat loss focus</p>
+</div>
+<!-- Maintain -->
+<div class="p-6 rounded-xl border-2 border-primary bg-primary-container/10 transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="horizontal_rule">horizontal_rule</span>
+<div class="w-4 h-4 rounded-full border-2 border-primary bg-primary flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-on-primary"></div>
+</div>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold mb-1">Maintain</p>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Energy balance, performance focus</p>
+</div>
+<!-- Gain Muscle -->
+<div class="p-6 rounded-xl border-2 border-outline-variant/20 hover:border-primary/40 transition-all cursor-pointer group">
+<div class="flex justify-between items-start mb-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="fitness_center">fitness_center</span>
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant/40 group-hover:bg-primary group-hover:border-primary transition-all"></div>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-bold mb-1">Gain muscle</p>
+<p class="text-on-surface-variant text-label-sm font-label-sm">Caloric surplus, protein rich</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Medical History & Allergies (Bento Style) -->
+<div class="col-span-12 md:col-span-6 bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-error" data-icon="medical_services">medical_services</span>
+<h4 class="font-headline-md text-headline-md">Medical Profile</h4>
+</div>
+<div class="space-y-6">
+<div>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase mb-3 tracking-widest">Active Conditions</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-error/10 text-error px-4 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="heart_broken">heart_broken</span> Hypertension
+                                </span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-1.5 rounded-full font-label-md text-label-md">Mild Astigmatism</span>
+</div>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase mb-3 tracking-widest">Allergies &amp; Intolerances</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-error/10 text-error px-4 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="warning">warning</span> Peanuts
+                                </span>
+<span class="bg-secondary-container/10 text-secondary px-4 py-1.5 rounded-full font-label-md text-label-md flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="opacity">opacity</span> Lactose Intolerance
+                                </span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-1.5 rounded-full font-label-md text-label-md">Shellfish (Low)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Preferences (Level 1 Card) -->
+<div class="col-span-12 md:col-span-6 bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8 shadow-sm">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" data-icon="restaurant">restaurant</span>
+<h4 class="font-headline-md text-headline-md">Food Preferences</h4>
+</div>
+<div class="space-y-6">
+<div>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase mb-3 tracking-widest">Dietary Pattern</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary-container/10 text-primary px-4 py-1.5 rounded-full font-label-md text-label-md border border-primary/20">Mediterranean Diet</span>
+<span class="bg-primary-container/10 text-primary px-4 py-1.5 rounded-full font-label-md text-label-md border border-primary/20">High Fiber</span>
+</div>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase mb-3 tracking-widest">Favorite Ingredients</p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-2">
+                                    Avocado
+                                </span>
+<span class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-2">
+                                    Salmon
+                                </span>
+<span class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-2">
+                                    Blueberries
+                                </span>
+<span class="bg-surface-container-high text-on-surface px-4 py-1.5 rounded-lg font-label-md text-label-md flex items-center gap-2">
+                                    Quinoa
+                                </span>
+</div>
+</div>
+<div>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase mb-3 tracking-widest">Avoided Foods</p>
+<div class="flex flex-wrap gap-2 opacity-70">
+<span class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-lg font-label-md text-label-md line-through">Processed Sugar</span>
+<span class="bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-lg font-label-md text-label-md line-through">Coriander</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Precision Health Analysis Visual (Full Width) -->
+<div class="col-span-12 glass-panel rounded-2xl p-10 border border-outline-variant/30 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-shrink-0 relative w-48 h-48">
+<!-- Custom Circular Progress using SVG -->
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-primary/10" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-dasharray="502.6" stroke-dashoffset="60" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-display-lg text-display-lg leading-none">88</span>
+<span class="text-on-surface-variant font-label-md text-label-md">Health Index</span>
+</div>
+</div>
+<div class="flex-1 space-y-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-label-md text-label-md font-bold uppercase">AI Bio-Sync Insight</span>
+</div>
+<h4 class="font-headline-lg text-headline-lg">Your metabolism is peaking in efficiency.</h4>
+<p class="text-on-surface-variant font-body-lg text-body-lg max-w-2xl">
+                            Based on your latest biometrics and meal adherence, your metabolic flexibility has improved by 14% over the last 30 days. We recommend maintaining current protein levels while slightly increasing hydration.
+                        </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-label-sm font-label-sm">Metabolic Age</span>
+<span class="font-headline-md text-headline-md">32 <span class="text-label-sm text-primary">(-4 yrs)</span></span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-label-sm font-label-sm">Recovery Rate</span>
+<span class="font-headline-md text-headline-md">High</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-label-sm font-label-sm">Optimal Meal Time</span>
+<span class="font-headline-md text-headline-md">08:30 AM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer (Authority: JSON) -->
+<footer class="w-full py-section-gap bg-on-tertiary-fixed dark:bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding-desktop max-w-[1440px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h3 class="font-headline-md text-headline-md text-primary mb-4">NutriAI</h3>
+<p class="font-label-sm text-label-sm text-tertiary-fixed-dim leading-relaxed">
+                        © 2024 NutriAI. Precision Nutrition for Longevity.
+                    </p>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-tertiary font-label-md text-label-md mb-4">Platform</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-fixed transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-fixed transition-opacity" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-tertiary font-label-md text-label-md mb-4">Support</h4>
+<ul class="space-y-2">
+<li><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-fixed transition-opacity" href="#">Contact</a></li>
+<li><a class="font-label-sm text-label-sm text-tertiary-fixed-dim hover:text-primary-fixed transition-opacity" href="#">API Documentation</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="text-on-tertiary font-label-md text-label-md mb-4">The Science</h4>
+<p class="font-label-sm text-label-sm text-tertiary-fixed-dim">
+                        Our algorithms are trained on peer-reviewed clinical data to provide medical-grade nutritional insights.
+                    </p>
+</div>
+</div>
+</footer>
+</main>
+</body></html>
