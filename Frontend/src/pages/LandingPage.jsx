@@ -35,7 +35,7 @@ const LandingPage = () => {
               <h1 className="font-headline text-4xl md:text-6xl text-on-surface mb-6 tracking-tight leading-tight font-bold">
                 Tu asistente inteligente de <span className="text-primary">nutrición preventiva</span>
               </h1>
-              <p className="text-lg text-green-400 mb-10 max-w-xl leading-relaxed">
+              <p className="text-lg text-tertiary mb-10 max-w-xl leading-relaxed">
                 Optimiza tu salud con análisis metabólicos y planes personalizados generados por IA. NutriAI traduce datos médicos y nutricionales complejos en acciones diarias para tu longevidad.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -74,7 +74,7 @@ const LandingPage = () => {
                   <div className="w-full bg-surface-container-highest h-2 rounded-full mb-2">
                     <div className="bg-primary h-full w-[85%] rounded-full"></div>
                   </div>
-                  <p className="text-xs text-green-400 font-medium">+15% mejora esta semana</p>
+                  <p className="text-xs text-tertiary font-medium">+15% mejora esta semana</p>
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@ const LandingPage = () => {
         <section id="funciones" className="py-16 px-6 md:px-12 max-w-[1440px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl text-on-surface mb-4 font-bold">Funciones de precisión</h2>
-            <p className="text-green-400 max-w-2xl mx-auto">
+            <p className="text-tertiary max-w-2xl mx-auto">
               Tecnología de grado clínico diseñada para ser intuitiva, personalizada y adaptable a tus necesidades reales.
             </p>
           </div>
@@ -98,7 +98,7 @@ const LandingPage = () => {
                   <TrendingUp size={24} />
                 </span>
                 <h3 className="font-headline text-2xl font-bold mb-4">Análisis nutricional profundo</h3>
-                <p className="text-green-400 max-w-sm">
+                <p className="text-tertiary max-w-sm">
                   Evaluamos tus requerimientos calóricos e índice de masa corporal para entender exactamente lo que necesita tu cuerpo.
                 </p>
               </div>
@@ -136,7 +136,7 @@ const LandingPage = () => {
                   <Compass size={24} />
                 </span>
                 <h3 className="font-headline text-xl font-bold mb-2">Asistente IA Interactivo</h3>
-                <p className="text-green-400">
+                <p className="text-tertiary">
                   Resuelve tus dudas nutricionales en tiempo real con un chat clínico inteligente y profesional.
                 </p>
               </div>
@@ -149,7 +149,7 @@ const LandingPage = () => {
                   <Award size={24} />
                 </span>
                 <h3 className="font-headline text-xl font-bold mb-2">Planes alimenticios inteligentes</h3>
-                <p className="text-green-400">
+                <p className="text-tertiary">
                   Planificación automática de menús semanales de comida con desglose total de calorías, carbohidratos, proteínas y grasas.
                 </p>
               </div>
@@ -186,7 +186,7 @@ const LandingPage = () => {
         <section id="beneficios" className="py-16 px-6 md:px-12 max-w-[1440px] mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-headline text-3xl md:text-4xl text-on-surface mb-4 font-bold">Lo que dicen los expertos</h2>
-            <p className="text-green-400 max-w-xl mx-auto">Nutrición basada en ciencia y respaldada por profesionales.</p>
+            <p className="text-tertiary max-w-xl mx-auto">Nutrición basada en ciencia y respaldada por profesionales.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ const LandingPage = () => {
                 />
                 <div>
                   <p className="font-bold text-sm text-on-surface">Dra. Elena Rodríguez</p>
-                  <p className="text-xs text-green-400">Especialista en Endocrinología</p>
+                  <p className="text-xs text-tertiary">Especialista en Endocrinología</p>
                 </div>
               </div>
             </div>
@@ -229,7 +229,7 @@ const LandingPage = () => {
                 />
                 <div>
                   <p className="font-bold text-sm text-on-surface">Marco Sandoval</p>
-                  <p className="text-xs text-green-400">Triatleta Profesional</p>
+                  <p className="text-xs text-tertiary">Triatleta Profesional</p>
                 </div>
               </div>
             </div>

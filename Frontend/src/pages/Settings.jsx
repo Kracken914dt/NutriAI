@@ -5,8 +5,7 @@ import { Settings, Moon, Sun, Download, Trash2, ShieldAlert, Sparkles, Check } f
 
 const SettingsPage = () => {
   const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('nutriai_dark_mode') === 'true' || 
-           document.documentElement.classList.contains('dark');
+    return localStorage.getItem('nutriai_dark_mode') === 'true';
   });
   const [exporting, setExporting] = useState(false);
   const [success, setSuccess] = useState('');
@@ -21,6 +20,8 @@ const SettingsPage = () => {
       localStorage.setItem('nutriai_dark_mode', 'false');
     }
   }, [darkMode]);
+
+  const themeLabel = darkMode ? 'Oscuro' : 'Claro';
 
   const handleExportData = async () => {
     try {
@@ -61,7 +62,7 @@ const SettingsPage = () => {
     <div className="space-y-8">
       <div>
         <h3 className="font-headline text-lg font-bold">Configuración de NutriAI</h3>
-        <p className="text-xs text-green-400">Ajusta las preferencias de visualización y gestiona tus datos clínicos</p>
+        <p className="text-xs text-tertiary">Ajusta las preferencias de visualización y gestiona tus datos clínicos</p>
       </div>
 
       {success && (
@@ -87,22 +88,26 @@ const SettingsPage = () => {
               <Sun size={18} /> Preferencias Visuales
             </h4>
             
-            <div className="flex items-center justify-between py-2">
+            <div className="flex items-center justify-between gap-4 py-2">
               <div>
-                <p className="text-sm font-semibold">Modo Oscuro (Dark Mode)</p>
-                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim">Adapta la interfaz para entornos de poca luz</p>
+                <p className="text-sm font-semibold">Modo {themeLabel}</p>
+                <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim">Activa el modo claro o oscuro para toda la aplicación</p>
               </div>
-              <button
-                onClick={() => setDarkMode(!darkMode)}
-                className={`
-                  w-14 h-8 flex items-center rounded-full p-1 cursor-pointer transition-all duration-300
-                  ${darkMode ? 'bg-primary justify-end' : 'bg-slate-300 justify-start'}
-                `}
-              >
-                <span className="w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center text-slate-600">
-                  {darkMode ? <Moon size={12} className="text-primary" /> : <Sun size={12} />}
-                </span>
-              </button>
+              <div className="flex items-center gap-3 shrink-0">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-primary">{themeLabel}</span>
+                <button
+                  onClick={() => setDarkMode(!darkMode)}
+                  aria-pressed={darkMode}
+                  className={`
+                    w-14 h-8 flex items-center rounded-full p-1 cursor-pointer transition-all duration-300
+                    ${darkMode ? 'bg-primary justify-end' : 'bg-slate-300 justify-start'}
+                  `}
+                >
+                  <span className="w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center text-slate-600">
+                    {darkMode ? <Moon size={12} className="text-primary" /> : <Sun size={12} />}
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -115,7 +120,7 @@ const SettingsPage = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-2">
               <div>
                 <p className="text-sm font-semibold">Exportar Reporte y Registros</p>
-                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim">Descarga una copia completa de tu perfil y comidas en formato JSON</p>
+                <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim">Descarga una copia completa de tu perfil y comidas en formato JSON</p>
               </div>
               <button
                 onClick={handleExportData}

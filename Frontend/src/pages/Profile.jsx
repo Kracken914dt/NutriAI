@@ -119,7 +119,7 @@ const Profile = () => {
       <div className="flex justify-between items-center flex-wrap gap-4">
         <div>
           <h3 className="font-headline text-lg font-bold">Perfil Nutricional</h3>
-          <p className="text-xs text-green-400">Configura tus variables fisiológicas básicas</p>
+          <p className="text-xs text-tertiary">Configura tus variables fisiológicas básicas</p>
         </div>
         {!isEditing && (
           <button
@@ -158,14 +158,14 @@ const Profile = () => {
               src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=150"
             />
             <h4 className="font-headline text-lg font-bold">{profile?.name}</h4>
-            <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim uppercase font-bold tracking-wider mt-1">{profile?.email}</p>
+            <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim uppercase font-bold tracking-wider mt-1">{profile?.email}</p>
             <div className="mt-6 pt-6 border-t border-outline-variant/20 grid grid-cols-2 gap-4 text-center">
               <div>
-                <p className="text-[10px] text-green-400 dark:text-tertiary-fixed-dim uppercase font-bold">Actividad</p>
+                <p className="text-[10px] text-tertiary dark:text-tertiary-fixed-dim uppercase font-bold">Actividad</p>
                 <p className="text-sm font-semibold capitalize mt-1">{profile?.activity_level}</p>
               </div>
               <div>
-                <p className="text-[10px] text-green-400 dark:text-tertiary-fixed-dim uppercase font-bold">Dieta</p>
+                <p className="text-[10px] text-tertiary dark:text-tertiary-fixed-dim uppercase font-bold">Dieta</p>
                 <p className="text-sm font-semibold capitalize mt-1">{profile?.food_preference}</p>
               </div>
             </div>
@@ -177,9 +177,9 @@ const Profile = () => {
               <Heart size={20} className="fill-primary/20" />
             </div>
             <div>
-              <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim font-bold">Diagnóstico de Peso (IMC)</p>
+              <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim font-bold">Diagnóstico de Peso (IMC)</p>
               <h5 className="font-headline text-lg font-bold mt-1">{bmi} <span className="text-xs text-primary font-bold">({bmiCategory})</span></h5>
-              <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim mt-2 leading-relaxed">{bmiDesc}</p>
+              <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mt-2 leading-relaxed">{bmiDesc}</p>
             </div>
           </div>
         </section>
@@ -344,7 +344,7 @@ const Profile = () => {
                     <User size={18} />
                   </span>
                   <div>
-                    <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Nombre</p>
+                    <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Nombre</p>
                     <p className="font-semibold mt-0.5">{profile?.name}</p>
                   </div>
                 </div>
@@ -354,7 +354,7 @@ const Profile = () => {
                     <HelpCircle size={18} />
                   </span>
                   <div>
-                    <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Edad</p>
+                    <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Edad</p>
                     <p className="font-semibold mt-0.5">{profile?.age} años</p>
                   </div>
                 </div>
@@ -364,7 +364,7 @@ const Profile = () => {
                     <Weight size={18} />
                   </span>
                   <div>
-                    <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Peso Actual</p>
+                    <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Peso Actual</p>
                     <p className="font-semibold mt-0.5">{profile?.weight} kg</p>
                   </div>
                 </div>
@@ -374,7 +374,7 @@ const Profile = () => {
                     <Ruler size={18} />
                   </span>
                   <div>
-                    <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Estatura</p>
+                    <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Estatura</p>
                     <p className="font-semibold mt-0.5">{profile?.height} cm</p>
                   </div>
                 </div>
@@ -384,7 +384,7 @@ const Profile = () => {
                     <Activity size={18} />
                   </span>
                   <div>
-                    <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Nivel de Actividad</p>
+                    <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Nivel de Actividad</p>
                     <p className="font-semibold capitalize mt-0.5">{profile?.activity_level}</p>
                   </div>
                 </div>
@@ -394,7 +394,7 @@ const Profile = () => {
                     <Award size={18} />
                   </span>
                   <div>
-                    <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Peso Objetivo</p>
+                    <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Peso Objetivo</p>
                     <p className="font-semibold mt-0.5">{profile?.target_weight || profile?.weight} kg</p>
                   </div>
                 </div>

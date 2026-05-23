@@ -94,7 +94,7 @@ const AiAssistant = () => {
               <h4 className="font-headline font-bold text-sm text-on-surface dark:text-white leading-tight">Asistente Virtual NutriAI</h4>
               <div className="flex items-center gap-1 mt-0.5">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                <span className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Online & Analizando Perfil</span>
+                <span className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Online & Analizando Perfil</span>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ const AiAssistant = () => {
                   key={i}
                   disabled={sending}
                   onClick={() => handleSendMessage(chip)}
-                  className="px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-800 border border-outline-variant/30 text-green-400 dark:text-tertiary-fixed-dim font-bold text-xs hover:bg-primary-container/20 hover:text-primary transition-all shadow-sm active:scale-95 disabled:opacity-50"
+                  className="px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-800 border border-outline-variant/30 text-tertiary dark:text-tertiary-fixed-dim font-bold text-xs hover:bg-primary-container/20 hover:text-primary transition-all shadow-sm active:scale-95 disabled:opacity-50"
                 >
                   {chip}
                 </button>
@@ -163,7 +163,7 @@ const AiAssistant = () => {
               <input
                 type="text"
                 disabled={sending}
-                className="flex-grow bg-transparent border-none focus:ring-0 text-sm px-4 text-on-surface dark:text-black placeholder:text-green-900/50"
+                className="flex-grow bg-transparent border-none focus:ring-0 text-sm px-4 text-on-surface dark:text-black placeholder:text-tertiary/50"
                 placeholder="Escribe tu consulta nutricional aquí..."
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
@@ -189,7 +189,7 @@ const AiAssistant = () => {
           {userProfile ? (
             <div className="space-y-6">
               <div className="bg-surface-container-low dark:bg-slate-800 p-4 rounded-2xl border border-outline-variant/10">
-                <p className="text-[10px] uppercase font-bold tracking-wider text-green-400 dark:text-tertiary-fixed-dim">Salud Basal</p>
+                <p className="text-[10px] uppercase font-bold tracking-wider text-tertiary dark:text-tertiary-fixed-dim">Salud Basal</p>
                 <div className="flex justify-between items-end mt-2">
                   <span className="text-xs font-bold text-on-surface dark:text-white">IMC</span>
                   <span className="text-xs font-bold text-primary">
@@ -209,18 +209,18 @@ const AiAssistant = () => {
                   <Activity size={16} />
                   <span className="text-xs font-bold text-on-primary-container">Longevidad Celular</span>
                 </div>
-                <p className="text-[11px] leading-relaxed text-green-950 dark:text-tertiary-fixed-dim">
+                <p className="text-[11px] leading-relaxed text-tertiary dark:text-white">
                   Tu ingesta de micronutrientes se está controlando. La IA sugiere consumir tés ricos en polifenoles (Té Verde) entre comidas para reducir la oxidación celular.
                 </p>
               </div>
             </div>
           ) : (
-            <p className="text-xs text-green-400">Cargando perfil...</p>
+            <p className="text-xs text-tertiary">Cargando perfil...</p>
           )}
         </div>
 
         <div className="border-t border-outline-variant/10 pt-6">
-          <button className="w-full flex items-center justify-center gap-2 border border-outline-variant py-2.5 rounded-xl text-green-400 dark:text-tertiary-fixed-dim font-bold text-xs hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
+          <button className="w-full flex items-center justify-center gap-2 border border-outline-variant py-2.5 rounded-xl text-tertiary dark:text-tertiary-fixed-dim font-bold text-xs hover:bg-slate-50 dark:hover:bg-slate-900 transition-all">
             <FileText size={14} /> Exportar Reporte Médico
           </button>
         </div>

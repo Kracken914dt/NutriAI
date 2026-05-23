@@ -62,7 +62,7 @@ const MealPlan = () => {
       <div className="flex justify-between items-center flex-wrap gap-4">
         <div>
           <h3 className="font-headline text-lg font-bold">Plan Alimenticio Inteligente</h3>
-          <p className="text-xs text-green-400">Menú semanal personalizado de grado clínico generado por IA</p>
+          <p className="text-xs text-tertiary">Menú semanal personalizado de grado clínico generado por IA</p>
         </div>
         <button
           onClick={handleGenerateNewPlan}
@@ -94,16 +94,16 @@ const MealPlan = () => {
       {userGoals && (
         <section className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="border-r border-outline-variant/20 pr-4">
-            <p className="text-xs font-bold text-green-400 dark:text-tertiary-fixed-dim uppercase tracking-wider">Objetivo de Salud</p>
+            <p className="text-xs font-bold text-tertiary dark:text-tertiary-fixed-dim uppercase tracking-wider">Objetivo de Salud</p>
             <p className="font-headline text-lg font-bold mt-1 text-primary">{userGoals.goalText}</p>
-            <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim mt-0.5">Preferencia: {userGoals.foodPreference}</p>
+            <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mt-0.5">Preferencia: {userGoals.foodPreference}</p>
           </div>
           <div>
-            <p className="text-xs font-bold text-green-400 dark:text-tertiary-fixed-dim uppercase tracking-wider">Calorías Diarias</p>
+            <p className="text-xs font-bold text-tertiary dark:text-tertiary-fixed-dim uppercase tracking-wider">Calorías Diarias</p>
             <p className="font-headline text-2xl font-bold mt-1">{userGoals.dailyCalories} kcal</p>
           </div>
           <div>
-            <p className="text-xs font-bold text-green-400 dark:text-tertiary-fixed-dim uppercase tracking-wider">Macronutrientes Meta</p>
+            <p className="text-xs font-bold text-tertiary dark:text-tertiary-fixed-dim uppercase tracking-wider">Macronutrientes Meta</p>
             <div className="flex gap-4 mt-2 text-xs font-bold">
               <span className="text-primary">P: {userGoals.macros?.proteins}</span>
               <span className="text-secondary">C: {userGoals.macros?.carbs}</span>
@@ -112,7 +112,7 @@ const MealPlan = () => {
           </div>
           <div className="bg-primary/5 p-4 rounded-xl flex items-start gap-2.5">
             <Info className="text-primary flex-shrink-0" size={18} />
-            <p className="text-[11px] leading-relaxed text-green-400 dark:text-tertiary-fixed-dim">
+            <p className="text-[11px] leading-relaxed text-tertiary dark:text-tertiary-fixed-dim">
               Tu plan alimenticio preventivo se ha estructurado para mejorar tu salud cardiovascular, digestiva y muscular.
             </p>
           </div>
@@ -129,7 +129,7 @@ const MealPlan = () => {
               px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200
               ${activeDay === day 
                 ? 'bg-primary text-on-primary shadow-sm' 
-                : 'text-green-400 dark:text-tertiary-fixed-dim hover:bg-slate-100 dark:hover:bg-slate-900'
+                : 'text-tertiary dark:text-tertiary-fixed-dim hover:bg-slate-100 dark:hover:bg-slate-900'
               }
             `}
           >
@@ -155,8 +155,8 @@ const MealPlan = () => {
                   <h5 className="font-bold text-sm text-on-surface dark:text-white">Desayuno</h5>
                   <span className="text-xs font-semibold bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-200 px-2.5 py-0.5 rounded-full">{activePlanDay.desayuno?.cal} kcal</span>
                 </div>
-                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim mt-2 leading-relaxed font-semibold">{activePlanDay.desayuno?.name}</p>
-                <div className="flex gap-4 mt-3 text-[10px] text-green-400 dark:text-tertiary-fixed-dim font-bold">
+                <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mt-2 leading-relaxed font-semibold">{activePlanDay.desayuno?.name}</p>
+                <div className="flex gap-4 mt-3 text-[10px] text-tertiary dark:text-tertiary-fixed-dim font-bold">
                   <span>P: {activePlanDay.desayuno?.prot}g</span>
                   <span>C: {activePlanDay.desayuno?.carbs}g</span>
                   <span>G: {activePlanDay.desayuno?.fats}g</span>
@@ -174,8 +174,8 @@ const MealPlan = () => {
                   <h5 className="font-bold text-sm text-on-surface dark:text-white">Almuerzo / Comida</h5>
                   <span className="text-xs font-semibold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-200 px-2.5 py-0.5 rounded-full">{activePlanDay.almuerzo?.cal} kcal</span>
                 </div>
-                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim mt-2 leading-relaxed font-semibold">{activePlanDay.almuerzo?.name}</p>
-                <div className="flex gap-4 mt-3 text-[10px] text-green-400 dark:text-tertiary-fixed-dim font-bold">
+                <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mt-2 leading-relaxed font-semibold">{activePlanDay.almuerzo?.name}</p>
+                <div className="flex gap-4 mt-3 text-[10px] text-tertiary dark:text-tertiary-fixed-dim font-bold">
                   <span>P: {activePlanDay.almuerzo?.prot}g</span>
                   <span>C: {activePlanDay.almuerzo?.carbs}g</span>
                   <span>G: {activePlanDay.almuerzo?.fats}g</span>
@@ -193,8 +193,8 @@ const MealPlan = () => {
                   <h5 className="font-bold text-sm text-on-surface dark:text-white">Cena</h5>
                   <span className="text-xs font-semibold bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-200 px-2.5 py-0.5 rounded-full">{activePlanDay.cena?.cal} kcal</span>
                 </div>
-                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim mt-2 leading-relaxed font-semibold">{activePlanDay.cena?.name}</p>
-                <div className="flex gap-4 mt-3 text-[10px] text-green-400 dark:text-tertiary-fixed-dim font-bold">
+                <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mt-2 leading-relaxed font-semibold">{activePlanDay.cena?.name}</p>
+                <div className="flex gap-4 mt-3 text-[10px] text-tertiary dark:text-tertiary-fixed-dim font-bold">
                   <span>P: {activePlanDay.cena?.prot}g</span>
                   <span>C: {activePlanDay.cena?.carbs}g</span>
                   <span>G: {activePlanDay.cena?.fats}g</span>
@@ -212,8 +212,8 @@ const MealPlan = () => {
                   <h5 className="font-bold text-sm text-on-surface dark:text-white">Snack / Colación</h5>
                   <span className="text-xs font-semibold bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-200 px-2.5 py-0.5 rounded-full">{activePlanDay.snack?.cal} kcal</span>
                 </div>
-                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim mt-2 leading-relaxed font-semibold">{activePlanDay.snack?.name}</p>
-                <div className="flex gap-4 mt-3 text-[10px] text-green-400 dark:text-tertiary-fixed-dim font-bold">
+                <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim mt-2 leading-relaxed font-semibold">{activePlanDay.snack?.name}</p>
+                <div className="flex gap-4 mt-3 text-[10px] text-tertiary dark:text-tertiary-fixed-dim font-bold">
                   <span>P: {activePlanDay.snack?.prot}g</span>
                   <span>C: {activePlanDay.snack?.carbs}g</span>
                   <span>G: {activePlanDay.snack?.fats}g</span>
@@ -228,7 +228,7 @@ const MealPlan = () => {
             
             <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm space-y-6">
               <div>
-                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim font-bold">Energía Total Proyectada</p>
+                <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim font-bold">Energía Total Proyectada</p>
                 <p className="font-headline text-3xl font-extrabold text-primary mt-1">{activePlanDay.totals?.calories} kcal</p>
               </div>
               
@@ -236,7 +236,7 @@ const MealPlan = () => {
                 <div>
                   <div className="flex justify-between text-xs font-semibold mb-2">
                     <span>Proteína Proyectada</span>
-                    <span className="text-green-400 dark:text-tertiary-fixed-dim">{activePlanDay.totals?.proteins}g</span>
+                    <span className="text-tertiary dark:text-tertiary-fixed-dim">{activePlanDay.totals?.proteins}g</span>
                   </div>
                   <div className="w-full bg-surface-container h-2 rounded-full overflow-hidden">
                     <div className="bg-primary h-full" style={{ width: `${Math.min((activePlanDay.totals?.proteins / (userGoals?.dailyCalories ? userGoals.dailyCalories * 0.05 : 100)) * 100, 100)}%` }}></div>
@@ -246,7 +246,7 @@ const MealPlan = () => {
                 <div>
                   <div className="flex justify-between text-xs font-semibold mb-2">
                     <span>Carbohidratos Proyectados</span>
-                    <span className="text-green-400 dark:text-tertiary-fixed-dim">{activePlanDay.totals?.carbs}g</span>
+                    <span className="text-tertiary dark:text-tertiary-fixed-dim">{activePlanDay.totals?.carbs}g</span>
                   </div>
                   <div className="w-full bg-surface-container h-2 rounded-full overflow-hidden">
                     <div className="bg-secondary h-full" style={{ width: `${Math.min((activePlanDay.totals?.carbs / (userGoals?.dailyCalories ? userGoals.dailyCalories * 0.1 : 200)) * 100, 100)}%` }}></div>
@@ -256,7 +256,7 @@ const MealPlan = () => {
                 <div>
                   <div className="flex justify-between text-xs font-semibold mb-2">
                     <span>Grasas Proyectadas</span>
-                    <span className="text-green-400 dark:text-tertiary-fixed-dim">{activePlanDay.totals?.fats}g</span>
+                    <span className="text-tertiary dark:text-tertiary-fixed-dim">{activePlanDay.totals?.fats}g</span>
                   </div>
                   <div className="w-full bg-surface-container h-2 rounded-full overflow-hidden">
                     <div className="bg-tertiary h-full" style={{ width: `${Math.min((activePlanDay.totals?.fats / (userGoals?.dailyCalories ? userGoals.dailyCalories * 0.03 : 60)) * 100, 100)}%` }}></div>
@@ -264,7 +264,7 @@ const MealPlan = () => {
                 </div>
               </div>
 
-              <div className="border-t border-outline-variant/10 pt-4 text-xs text-green-400 dark:text-tertiary-fixed-dim space-y-2">
+              <div className="border-t border-outline-variant/10 pt-4 text-xs text-tertiary dark:text-tertiary-fixed-dim space-y-2">
                 <p className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                   Garantiza el 100% de micronutrientes diarios.
@@ -291,7 +291,7 @@ const MealPlan = () => {
           </div>
         </div>
       ) : (
-        <div className="p-12 text-center text-green-400">Generando plan nutricional...</div>
+        <div className="p-12 text-center text-tertiary">Generando plan nutricional...</div>
       )}
     </div>
   );

@@ -112,9 +112,9 @@ const Statistics = () => {
             <TrendingUp size={24} />
           </div>
           <div>
-            <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Promedio Calórico Semanal</p>
+            <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Promedio Calórico Semanal</p>
             <h4 className="font-headline text-2xl font-bold mt-1">{avgCalories} kcal / día</h4>
-            <p className="text-[10px] text-green-400 dark:text-tertiary-fixed-dim mt-0.5">Meta establecida: {targetCalories} kcal</p>
+            <p className="text-[10px] text-tertiary dark:text-tertiary-fixed-dim mt-0.5">Meta establecida: {targetCalories} kcal</p>
           </div>
         </div>
 
@@ -123,9 +123,9 @@ const Statistics = () => {
             <Scale size={24} />
           </div>
           <div>
-            <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Relación Peso / Meta</p>
+            <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Relación Peso / Meta</p>
             <h4 className="font-headline text-2xl font-bold mt-1">{weight} kg</h4>
-            <p className="text-[10px] text-green-400 dark:text-tertiary-fixed-dim mt-0.5">Objetivo preventivo: {targetWeight} kg</p>
+            <p className="text-[10px] text-tertiary dark:text-tertiary-fixed-dim mt-0.5">Objetivo preventivo: {targetWeight} kg</p>
           </div>
         </div>
 
@@ -134,7 +134,7 @@ const Statistics = () => {
             <Percent size={24} />
           </div>
           <div>
-            <p className="text-[10px] uppercase font-bold text-green-400 dark:text-tertiary-fixed-dim">Promedio de Macronutrientes</p>
+            <p className="text-[10px] uppercase font-bold text-tertiary dark:text-tertiary-fixed-dim">Promedio de Macronutrientes</p>
             <p className="text-xs font-bold mt-1 flex gap-3">
               <span className="text-primary">P: {avgProtein}g</span>
               <span className="text-secondary">C: {avgCarbs}g</span>
@@ -150,7 +150,7 @@ const Statistics = () => {
         <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm">
           <div className="mb-6">
             <h4 className="font-headline text-md font-bold text-on-surface">Curva de Ingesta Calórica</h4>
-            <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim">Historial de energía absorbida comparada con el límite metabólico</p>
+            <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim">Historial de energía absorbida comparada con el límite metabólico</p>
           </div>
           <div className="h-72 w-full">
             <ResponsiveContainer width="100%" height="100%">
@@ -177,7 +177,7 @@ const Statistics = () => {
         <div className="bg-white dark:bg-on-tertiary-fixed p-6 rounded-2xl border border-outline-variant/30 shadow-sm">
           <div className="mb-6">
             <h4 className="font-headline text-md font-bold text-on-surface">Historial de Macronutrientes</h4>
-            <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim">Distribución diaria de Proteínas, Carbohidratos y Grasas (g)</p>
+            <p className="text-xs text-tertiary dark:text-tertiary-fixed-dim">Distribución diaria de Proteínas, Carbohidratos y Grasas (g)</p>
           </div>
           <div className="h-72 w-full">
             <ResponsiveContainer width="100%" height="100%">
