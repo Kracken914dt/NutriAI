@@ -115,7 +115,7 @@ const MealRegister = () => {
       <div className="flex justify-between items-center flex-wrap gap-4">
         <div>
           <h3 className="font-headline text-lg font-bold">Registro de Alimentos Diarios</h3>
-          <p className="text-xs text-on-surface-variant">Lleva la cuenta de tus comidas para el diagnóstico preventivo</p>
+          <p className="text-xs text-green-400">Lleva la cuenta de tus comidas para el diagnóstico preventivo</p>
         </div>
         <button
           onClick={() => setShowAddForm(!showAddForm)}
@@ -255,19 +255,19 @@ const MealRegister = () => {
         </h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="bg-surface-container-low dark:bg-surface-container-lowest p-4 rounded-xl">
-            <p className="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Calorías</p>
+            <p className="text-[10px] uppercase font-bold text-green-400 tracking-wider">Calorías</p>
             <p className="font-headline text-2xl font-bold mt-1 text-primary">{dailyTotals.calories} kcal</p>
           </div>
           <div className="bg-surface-container-low dark:bg-surface-container-lowest p-4 rounded-xl">
-            <p className="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Proteínas</p>
+            <p className="text-[10px] uppercase font-bold text-green-400 tracking-wider">Proteínas</p>
             <p className="font-headline text-2xl font-bold mt-1 text-secondary">{dailyTotals.proteins} g</p>
           </div>
           <div className="bg-surface-container-low dark:bg-surface-container-lowest p-4 rounded-xl">
-            <p className="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Carbohidratos</p>
+            <p className="text-[10px] uppercase font-bold text-green-400 tracking-wider">Carbohidratos</p>
             <p className="font-headline text-2xl font-bold mt-1 text-tertiary">{dailyTotals.carbs} g</p>
           </div>
           <div className="bg-surface-container-low dark:bg-surface-container-lowest p-4 rounded-xl">
-            <p className="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Grasas</p>
+            <p className="text-[10px] uppercase font-bold text-green-400 tracking-wider">Grasas</p>
             <p className="font-headline text-2xl font-bold mt-1 text-red-500">{dailyTotals.fats} g</p>
           </div>
         </div>
@@ -281,9 +281,9 @@ const MealRegister = () => {
         </div>
         
         {loading ? (
-          <div className="p-12 text-center text-on-surface-variant">Cargando alimentos registrados...</div>
+          <div className="p-12 text-center text-green-400">Cargando alimentos registrados...</div>
         ) : meals.length === 0 ? (
-          <div className="p-12 text-center text-on-surface-variant flex flex-col items-center justify-center gap-2">
+          <div className="p-12 text-center text-green-400 flex flex-col items-center justify-center gap-2">
             <Info size={32} className="opacity-40" />
             <p className="font-semibold text-sm">No has registrado ninguna comida todavía.</p>
             <p className="text-xs">Usa el botón de arriba para registrar tu primer alimento.</p>
@@ -292,7 +292,7 @@ const MealRegister = () => {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm border-collapse">
               <thead>
-                <tr className="bg-surface-container-low dark:bg-surface-container-lowest text-on-surface-variant dark:text-white uppercase font-bold text-[10px] tracking-wider border-b border-outline-variant/20">
+                <tr className="bg-surface-container-low dark:bg-surface-container-lowest text-green-400 dark:text-white uppercase font-bold text-[10px] tracking-wider border-b border-outline-variant/20">
                   <th className="py-4 px-6">Momento</th>
                   <th className="py-4 px-6">Alimento</th>
                   <th className="py-4 px-6 text-right">Calorías</th>
@@ -323,7 +323,7 @@ const MealRegister = () => {
                       <td className="py-4 px-6 text-right text-primary font-bold">{meal.proteins} g</td>
                       <td className="py-4 px-6 text-right text-secondary font-bold">{meal.carbs} g</td>
                       <td className="py-4 px-6 text-right text-red-500 font-bold">{meal.fats} g</td>
-                      <td className="py-4 px-6 text-center text-xs text-on-surface-variant dark:text-tertiary-fixed-dim">
+                      <td className="py-4 px-6 text-center text-xs text-green-400 dark:text-tertiary-fixed-dim">
                         {isToday ? 'Hoy, ' : ''}
                         {mealDate.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })}
                       </td>

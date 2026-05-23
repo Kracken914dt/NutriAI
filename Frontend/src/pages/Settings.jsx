@@ -61,7 +61,7 @@ const SettingsPage = () => {
     <div className="space-y-8">
       <div>
         <h3 className="font-headline text-lg font-bold">Configuración de NutriAI</h3>
-        <p className="text-xs text-on-surface-variant">Ajusta las preferencias de visualización y gestiona tus datos clínicos</p>
+        <p className="text-xs text-green-400">Ajusta las preferencias de visualización y gestiona tus datos clínicos</p>
       </div>
 
       {success && (
@@ -90,7 +90,7 @@ const SettingsPage = () => {
             <div className="flex items-center justify-between py-2">
               <div>
                 <p className="text-sm font-semibold">Modo Oscuro (Dark Mode)</p>
-                <p className="text-xs text-on-surface-variant dark:text-tertiary-fixed-dim">Adapta la interfaz para entornos de poca luz</p>
+                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim">Adapta la interfaz para entornos de poca luz</p>
               </div>
               <button
                 onClick={() => setDarkMode(!darkMode)}
@@ -115,7 +115,7 @@ const SettingsPage = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-2">
               <div>
                 <p className="text-sm font-semibold">Exportar Reporte y Registros</p>
-                <p className="text-xs text-on-surface-variant dark:text-tertiary-fixed-dim">Descarga una copia completa de tu perfil y comidas en formato JSON</p>
+                <p className="text-xs text-green-400 dark:text-tertiary-fixed-dim">Descarga una copia completa de tu perfil y comidas en formato JSON</p>
               </div>
               <button
                 onClick={handleExportData}

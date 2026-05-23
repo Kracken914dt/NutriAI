@@ -52,7 +52,7 @@ const Register = () => {
   return (
     <div className="bg-background min-h-screen flex flex-col justify-center items-center p-6 relative">
       {/* Back button */}
-      <Link to="/" className="absolute top-8 left-8 flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-medium">
+      <Link to="/" className="absolute top-8 left-8 flex items-center gap-2 text-green-400 hover:text-primary transition-colors font-medium">
         <ArrowLeft size={18} />
         Volver al inicio
       </Link>
@@ -63,7 +63,7 @@ const Register = () => {
       <div className="w-full max-w-xl glass-card rounded-3xl p-8 md:p-10 shadow-xl relative z-10 my-8">
         <div className="text-center mb-8">
           <h1 className="font-headline text-3xl font-extrabold text-primary mb-2">NutriAI</h1>
-          <p className="text-on-surface-variant text-sm">Crea tu perfil clínico y comienza a optimizar tu salud</p>
+          <p className="text-green-400 text-sm">Crea tu perfil clínico y comienza a optimizar tu salud</p>
         </div>
 
         {error && (
@@ -84,7 +84,7 @@ const Register = () => {
                   Nombre Completo *
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-green-400">
                     <User size={16} />
                   </span>
                   <input
@@ -104,7 +104,7 @@ const Register = () => {
                   Correo Electrónico *
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-green-400">
                     <Mail size={16} />
                   </span>
                   <input
@@ -124,7 +124,7 @@ const Register = () => {
                   Contraseña *
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-green-400">
                     <KeyRound size={16} />
                   </span>
                   <input
@@ -150,7 +150,7 @@ const Register = () => {
                     Edad
                   </label>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-green-400">
                       <HelpCircle size={16} />
                     </span>
                     <input
@@ -186,7 +186,7 @@ const Register = () => {
                   Peso Actual (kg)
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-green-400">
                     <Weight size={16} />
                   </span>
                   <input
@@ -206,7 +206,7 @@ const Register = () => {
                   Estatura (cm)
                 </label>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-green-400">
                     <Ruler size={16} />
                   </span>
                   <input
@@ -232,7 +232,7 @@ const Register = () => {
         </form>
 
         <div className="mt-8 text-center border-t border-outline-variant/20 pt-6">
-          <p className="text-sm text-on-surface-variant">
+          <p className="text-sm text-green-400">
             ¿Ya tienes una cuenta?{' '}
             <Link to="/login" className="text-primary font-bold hover:underline">
               Inicia sesión aquí
